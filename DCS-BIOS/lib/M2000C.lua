@@ -217,7 +217,20 @@ function defineBcdWheel(msg, device_id, arg_number, output_map, category, descri
 	alloc:setValue(dev0:get_argument_value(arg_number))
 	end
 	
-	-- to do : add document function
+	document {
+		identifier = msg,
+		category = category,
+		description = description,
+		control_type = "selector",
+		momentary_positions = "none",
+		inputs = {
+			{ interface = "BcdWheel", max_value = 1, description = "set position" },
+		},
+		outputs = {
+			{ ["type"] = "integer",
+			}
+		}
+	}
 		
 	moduleBeingDefined.inputProcessors[msg] = function(value)
 			GetDevice(device_id):set_argument_value(arg_number, value)
