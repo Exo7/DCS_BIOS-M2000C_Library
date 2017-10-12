@@ -2118,12 +2118,12 @@ docdata["M-2000C"] =
                                       "ECM_EM_DISP": {
                                                              "category": "ECM BOX",
                                                          "control_type": "display",
-                                                          "description": "ECM Box EM Display",
+                                                          "description": "O - ECM Box EM Display",
                                                            "identifier": "ECM_EM_DISP",
                                                                "inputs": [  ],
                                                               "outputs": [ {
                                                                                  "address": 12590,
-                                                                             "description": "ECM Box EM Display",
+                                                                             "description": "O - ECM Box EM Display",
                                                                               "max_length": 13,
                                                                                   "suffix": "",
                                                                                     "type": "string"
@@ -2132,12 +2132,12 @@ docdata["M-2000C"] =
                                      "ECM_FLR_DISP": {
                                                              "category": "ECM BOX",
                                                          "control_type": "display",
-                                                          "description": "ECM Box FLR Display",
+                                                          "description": "O - ECM Box FLR Display",
                                                            "identifier": "ECM_FLR_DISP",
                                                                "inputs": [  ],
                                                               "outputs": [ {
                                                                                  "address": 12576,
-                                                                             "description": "ECM Box FLR Display",
+                                                                             "description": "O - ECM Box FLR Display",
                                                                               "max_length": 13,
                                                                                   "suffix": "",
                                                                                     "type": "string"
@@ -5805,6 +5805,76 @@ docdata["M-2000C"] =
                                                                              } ],
                                                          "physical_variant": "toggle_switch"
                                                   },
+                                  "PCA_BR1_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Bottom #1 Display",
+                                                        "identifier": "PCA_BR1_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12646,
+                                                                          "description": "O - PCA Bottom #1 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_BR2_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Bottom #2 Display",
+                                                        "identifier": "PCA_BR2_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12652,
+                                                                          "description": "O - PCA Bottom #2 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_BR3_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Bottom #3 Display",
+                                                        "identifier": "PCA_BR3_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12658,
+                                                                          "description": "O - PCA Bottom #3 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_BR4_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Bottom #4 Display",
+                                                        "identifier": "PCA_BR4_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12664,
+                                                                          "description": "O - PCA Bottom #4 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_BR5_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Bottom #5 Display",
+                                                        "identifier": "PCA_BR5_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12670,
+                                                                          "description": "O - PCA Bottom #5 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
                                      "PCA_BTN_1": {
                                                               "api_variant": "momentary_last_position",
                                                                  "category": "PCA",
@@ -6033,6 +6103,76 @@ docdata["M-2000C"] =
                                                                              "shift_by": 5,
                                                                                "suffix": "",
                                                                                  "type": "integer"
+                                                                      } ]
+                                                  },
+                                  "PCA_UR1_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Upper #1 Display",
+                                                        "identifier": "PCA_UR1_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12616,
+                                                                          "description": "O - PCA Upper #1 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_UR2_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Upper #2 Display",
+                                                        "identifier": "PCA_UR2_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12622,
+                                                                          "description": "O - PCA Upper #2 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_UR3_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Upper #3 Display",
+                                                        "identifier": "PCA_UR3_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12628,
+                                                                          "description": "O - PCA Upper #3 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_UR4_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Upper #4 Display",
+                                                        "identifier": "PCA_UR4_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12634,
+                                                                          "description": "O - PCA Upper #4 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
+                                                                      } ]
+                                                  },
+                                  "PCA_UR5_DISP": {
+                                                          "category": "PCA",
+                                                      "control_type": "display",
+                                                       "description": "O - PCA Upper #5 Display",
+                                                        "identifier": "PCA_UR5_DISP",
+                                                            "inputs": [  ],
+                                                           "outputs": [ {
+                                                                              "address": 12640,
+                                                                          "description": "O - PCA Upper #5 Display",
+                                                                           "max_length": 6,
+                                                                               "suffix": "",
+                                                                                 "type": "string"
                                                                       } ]
                                                   },
                                    "SEL_JETT_SW": {
@@ -7566,12 +7706,12 @@ docdata["M-2000C"] =
                                       "PPA_QTY_DISP": {
                                                               "category": "PPA",
                                                           "control_type": "display",
-                                                           "description": "PPA Interval Display",
+                                                           "description": "O - PPA Interval Display",
                                                             "identifier": "PPA_QTY_DISP",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
                                                                                   "address": 12610,
-                                                                              "description": "PPA Interval Display",
+                                                                              "description": "O - PPA Interval Display",
                                                                                "max_length": 6,
                                                                                    "suffix": "",
                                                                                      "type": "string"

@@ -190,6 +190,77 @@ local function getEMDisp()
 	return ecmChf
 end
 
+local function getPCAUR1Disp()
+	local ind = parse_indication(6)
+	if ind == nil then return "   " end	
+	local PcaUr1 = ind["text_PCA_UR1"]
+	return PcaUr1
+end
+
+local function getPCAUR2Disp()
+	local ind = parse_indication(6)
+	if ind == nil then return "   " end	
+	local PcaUr2 = ind["text_PCA_UR2"]
+	return PcaUr2
+end
+
+local function getPCAUR3Disp()
+	local ind = parse_indication(6)
+	if ind == nil then return "   " end	
+	local PcaUr3 = ind["text_PCA_UR3"]
+	return PcaUr3
+end
+
+local function getPCAUR4Disp()
+	local ind = parse_indication(6)
+	if ind == nil then return "   " end	
+	local PcaUr4 = ind["text_PCA_UR4"]
+	return PcaUr4
+end
+
+local function getPCAUR5Disp()
+	local ind = parse_indication(6)
+	if ind == nil then return "   " end	
+	local PcaUr5 = ind["text_PCA_UR5"]
+	return PcaUr5
+end
+
+local function getPCABR1Disp()
+	local ind = parse_indication(7)
+	if ind == nil then return "   " end	
+	local PcaBR1 = ind["text_PCA_BR1"]
+	return PcaBR1
+end
+
+local function getPCABR2Disp()
+	local ind = parse_indication(7)
+	if ind == nil then return "   " end	
+	local PcaBR2 = ind["text_PCA_BR2"]
+	return PcaBR2
+end
+
+local function getPCABR3Disp()
+	local ind = parse_indication(7)
+	if ind == nil then return "   " end	
+	local PcaBR3 = ind["text_PCA_BR3"]
+	return PcaBR3
+end
+
+local function getPCABR4Disp()
+	local ind = parse_indication(7)
+	if ind == nil then return "   " end	
+	local PcaBR4 = ind["text_PCA_BR4"]
+	return PcaBR4
+end
+
+local function getPCABR5Disp()
+	local ind = parse_indication(7)
+	if ind == nil then return "   " end	
+	local PcaBR5 = ind["text_PCA_BR5"]
+	return PcaBR5
+end
+
+
 local function getIRDisp()
 	local ind = parse_indication(3)
 	if ind == nil then return "   " end	
@@ -745,10 +816,21 @@ defineTumb("HUD_RALT_SEL_SW", 5, 3204, 204, 0.5, {0, 1}, nil, false, "VTH", "I -
 defineTumb("RAD_RALT_PWR_SW", 5, 3205, 205, 0.5, {0, 1}, nil, false, "VTH", "I - HUD - Radar Altimeter Power Switch")
 defineIndicatorLight("HUD_REC", 212, "VTH", "O - HUD - Recording Indicator Light")
 defineFloat("VARIO_NEEDLE", 324, {0, 1}, "VVI", "O - VVI - Needle")
-defineString("ECM_FLR_DISP", getIRDisp, 13, "ECM BOX", "ECM Box FLR Display")
-defineString("ECM_EM_DISP", getEMDisp, 13, "ECM BOX", "ECM Box EM Display")
-defineString("PPA_QTY_DISP", getPPAQtyDisp, 6, "PPA", "PPA Quantity Display")
-defineString("PPA_QTY_DISP", getPPAIntDisp, 6, "PPA", "PPA Interval Display")
+defineString("ECM_FLR_DISP", getIRDisp, 13, "ECM BOX", "O - ECM Box FLR Display")
+defineString("ECM_EM_DISP", getEMDisp, 13, "ECM BOX", "O - ECM Box EM Display")
+defineString("PPA_QTY_DISP", getPPAQtyDisp, 6, "PPA", "O - PPA Quantity Display")
+defineString("PPA_QTY_DISP", getPPAIntDisp, 6, "PPA", "O - PPA Interval Display")
+defineString("PCA_UR1_DISP", getPCAUR1Disp, 6, "PCA", "O - PCA Upper #1 Display")
+defineString("PCA_UR2_DISP", getPCAUR2Disp, 6, "PCA", "O - PCA Upper #2 Display")
+defineString("PCA_UR3_DISP", getPCAUR3Disp, 6, "PCA", "O - PCA Upper #3 Display")
+defineString("PCA_UR4_DISP", getPCAUR4Disp, 6, "PCA", "O - PCA Upper #4 Display")
+defineString("PCA_UR5_DISP", getPCAUR5Disp, 6, "PCA", "O - PCA Upper #5 Display")
+defineString("PCA_BR1_DISP", getPCABR1Disp, 6, "PCA", "O - PCA Bottom #1 Display")
+defineString("PCA_BR2_DISP", getPCABR2Disp, 6, "PCA", "O - PCA Bottom #2 Display")
+defineString("PCA_BR3_DISP", getPCABR3Disp, 6, "PCA", "O - PCA Bottom #3 Display")
+defineString("PCA_BR4_DISP", getPCABR4Disp, 6, "PCA", "O - PCA Bottom #4 Display")
+defineString("PCA_BR5_DISP", getPCABR5Disp, 6, "PCA", "O - PCA Bottom #5 Display")
+
 
 
 
