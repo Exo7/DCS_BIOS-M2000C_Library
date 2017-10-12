@@ -2121,9 +2121,9 @@
                                                            "identifier": "ECM_EM_DISP",
                                                                "inputs": [  ],
                                                               "outputs": [ {
-                                                                                 "address": 12590,
+                                                                                 "address": 12560,
                                                                              "description": "O - ECM Box EM Display",
-                                                                              "max_length": 13,
+                                                                              "max_length": 3,
                                                                                   "suffix": "",
                                                                                     "type": "string"
                                                                          } ]
@@ -2135,9 +2135,9 @@
                                                            "identifier": "ECM_FLR_DISP",
                                                                "inputs": [  ],
                                                               "outputs": [ {
-                                                                                 "address": 12576,
+                                                                                 "address": 12558,
                                                                              "description": "O - ECM Box FLR Display",
-                                                                              "max_length": 13,
+                                                                              "max_length": 2,
                                                                                   "suffix": "",
                                                                                     "type": "string"
                                                                          } ]
@@ -5811,9 +5811,9 @@
                                                         "identifier": "PCA_BR1_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12646,
+                                                                              "address": 12588,
                                                                           "description": "O - PCA Bottom #1 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -5825,9 +5825,9 @@
                                                         "identifier": "PCA_BR2_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12652,
+                                                                              "address": 12592,
                                                                           "description": "O - PCA Bottom #2 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -5839,9 +5839,9 @@
                                                         "identifier": "PCA_BR3_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12658,
+                                                                              "address": 12596,
                                                                           "description": "O - PCA Bottom #3 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -5853,9 +5853,9 @@
                                                         "identifier": "PCA_BR4_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12664,
+                                                                              "address": 12600,
                                                                           "description": "O - PCA Bottom #4 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -5867,9 +5867,9 @@
                                                         "identifier": "PCA_BR5_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12670,
+                                                                              "address": 12604,
                                                                           "description": "O - PCA Bottom #5 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -6111,9 +6111,9 @@
                                                         "identifier": "PCA_UR1_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12616,
+                                                                              "address": 12568,
                                                                           "description": "O - PCA Upper #1 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -6125,9 +6125,9 @@
                                                         "identifier": "PCA_UR2_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12622,
+                                                                              "address": 12572,
                                                                           "description": "O - PCA Upper #2 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -6139,9 +6139,9 @@
                                                         "identifier": "PCA_UR3_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12628,
+                                                                              "address": 12576,
                                                                           "description": "O - PCA Upper #3 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -6153,9 +6153,9 @@
                                                         "identifier": "PCA_UR4_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12634,
+                                                                              "address": 12580,
                                                                           "description": "O - PCA Upper #4 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -6167,9 +6167,9 @@
                                                         "identifier": "PCA_UR5_DISP",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12640,
+                                                                              "address": 12584,
                                                                           "description": "O - PCA Upper #5 Display",
-                                                                           "max_length": 6,
+                                                                           "max_length": 3,
                                                                                "suffix": "",
                                                                                  "type": "string"
                                                                       } ]
@@ -6940,7 +6940,7 @@
                                                           "identifier": "INS_DEST_SW_LIGHT",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 256,
                                                                               "max_value": 1,
@@ -6956,7 +6956,7 @@
                                                           "identifier": "INS_EFF_SW_LIGHT",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 8192,
                                                                               "max_value": 1,
@@ -7002,7 +7002,7 @@
                                                           "identifier": "INS_INS_SW_LIGHT",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 16384,
                                                                               "max_value": 1,
@@ -7192,7 +7192,7 @@
                                                           "identifier": "PCN_BAD",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 512,
                                                                               "max_value": 1,
@@ -7210,7 +7210,7 @@
                                                              "outputs": [ {
                                                                                 "address": 12468,
                                                                             "description": "O - PCN - DEST Display",
-                                                                             "max_length": 9,
+                                                                             "max_length": 2,
                                                                                  "suffix": "",
                                                                                    "type": "string"
                                                                         } ]
@@ -7222,9 +7222,9 @@
                                                           "identifier": "PCN_DISP_L",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12478,
+                                                                                "address": 12470,
                                                                             "description": "O - PCN - Left Display",
-                                                                             "max_length": 9,
+                                                                             "max_length": 6,
                                                                                  "suffix": "",
                                                                                    "type": "string"
                                                                         } ]
@@ -7236,9 +7236,9 @@
                                                           "identifier": "PCN_DISP_PREP",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12488,
+                                                                                "address": 12476,
                                                                             "description": "O - PCN - PREP Display",
-                                                                             "max_length": 9,
+                                                                             "max_length": 2,
                                                                                  "suffix": "",
                                                                                    "type": "string"
                                                                         } ]
@@ -7250,9 +7250,9 @@
                                                           "identifier": "PCN_DISP_R",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12498,
+                                                                                "address": 12478,
                                                                             "description": "O - PCN - Right Display",
-                                                                             "max_length": 9,
+                                                                             "max_length": 7,
                                                                                  "suffix": "",
                                                                                    "type": "string"
                                                                         } ]
@@ -7280,7 +7280,7 @@
                                                           "identifier": "PCN_MRC",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 4096,
                                                                               "max_value": 1,
@@ -7328,7 +7328,7 @@
                                                           "identifier": "PCN_REC",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 1024,
                                                                               "max_value": 1,
@@ -7376,7 +7376,7 @@
                                                           "identifier": "PCN_VAL",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12476,
+                                                                                "address": 12484,
                                                                             "description": "0 if light is off, 1 if light is on",
                                                                                    "mask": 2048,
                                                                               "max_value": 1,
@@ -7438,9 +7438,9 @@
                                                                       "outputs": [ {
                                                                                          "address": 12486,
                                                                                      "description": "selector position",
-                                                                                            "mask": 1024,
+                                                                                            "mask": 4,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 10,
+                                                                                        "shift_by": 2,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -7463,9 +7463,9 @@
                                                                       "outputs": [ {
                                                                                          "address": 12486,
                                                                                      "description": "selector position",
-                                                                                            "mask": 768,
+                                                                                            "mask": 3,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 8,
+                                                                                        "shift_by": 0,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -7486,7 +7486,7 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12496,
+                                                                                         "address": 12486,
                                                                                      "description": "selector position",
                                                                                             "mask": 3072,
                                                                                        "max_value": 2,
@@ -7511,7 +7511,7 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12496,
+                                                                                         "address": 12486,
                                                                                      "description": "selector position",
                                                                                             "mask": 768,
                                                                                        "max_value": 2,
@@ -7541,7 +7541,7 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12496,
+                                                                                         "address": 12486,
                                                                                      "description": "selector position",
                                                                                             "mask": 4096,
                                                                                        "max_value": 1,
@@ -7573,9 +7573,9 @@
                                                                       "outputs": [ {
                                                                                          "address": 12486,
                                                                                      "description": "selector position",
-                                                                                            "mask": 2048,
+                                                                                            "mask": 8,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 11,
+                                                                                        "shift_by": 3,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -7598,9 +7598,9 @@
                                                                       "outputs": [ {
                                                                                          "address": 12486,
                                                                                      "description": "selector position",
-                                                                                            "mask": 12288,
+                                                                                            "mask": 48,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 12,
+                                                                                        "shift_by": 4,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -7613,7 +7613,7 @@
                                                             "identifier": "PPA_AUTO",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12496,
+                                                                                  "address": 12486,
                                                                               "description": "0 if light is off, 1 if light is on",
                                                                                      "mask": 32768,
                                                                                 "max_value": 1,
@@ -7629,11 +7629,11 @@
                                                             "identifier": "PPA_GUN_ROCKET_PAP",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12506,
+                                                                                  "address": 12488,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 2048,
+                                                                                     "mask": 8,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 11,
+                                                                                 "shift_by": 3,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -7645,11 +7645,11 @@
                                                             "identifier": "PPA_GUN_ROCKET_TOT",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12506,
+                                                                                  "address": 12488,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 4096,
+                                                                                     "mask": 16,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 12,
+                                                                                 "shift_by": 4,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -7661,11 +7661,11 @@
                                                             "identifier": "PPA_MAGIC_MIS",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12506,
+                                                                                  "address": 12488,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 1024,
+                                                                                     "mask": 4,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 10,
+                                                                                 "shift_by": 2,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -7677,11 +7677,11 @@
                                                             "identifier": "PPA_MAGIC_P",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12506,
+                                                                                  "address": 12488,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 512,
+                                                                                     "mask": 2,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 9,
+                                                                                 "shift_by": 1,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -7693,11 +7693,11 @@
                                                             "identifier": "PPA_MAN",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12506,
+                                                                                  "address": 12488,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 256,
+                                                                                     "mask": 1,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 8,
+                                                                                 "shift_by": 0,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -7709,9 +7709,9 @@
                                                             "identifier": "PPA_QTY_DISP",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12610,
+                                                                                  "address": 12566,
                                                                               "description": "O - PPA Interval Display",
-                                                                               "max_length": 6,
+                                                                               "max_length": 2,
                                                                                    "suffix": "",
                                                                                      "type": "string"
                                                                           } ]
@@ -7723,7 +7723,7 @@
                                                             "identifier": "PPA_S530_MIS",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12496,
+                                                                                  "address": 12486,
                                                                               "description": "0 if light is off, 1 if light is on",
                                                                                      "mask": 16384,
                                                                                 "max_value": 1,
@@ -7739,7 +7739,7 @@
                                                             "identifier": "PPA_S530_P",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12496,
+                                                                                  "address": 12486,
                                                                               "description": "0 if light is off, 1 if light is on",
                                                                                      "mask": 8192,
                                                                                 "max_value": 1,
@@ -7765,9 +7765,9 @@
                                                                       "outputs": [ {
                                                                                          "address": 12486,
                                                                                      "description": "selector position",
-                                                                                            "mask": 49152,
+                                                                                            "mask": 192,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 14,
+                                                                                        "shift_by": 6,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -7793,7 +7793,7 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12476,
+                                                                                         "address": 12484,
                                                                                      "description": "selector position",
                                                                                             "mask": 32768,
                                                                                        "max_value": 1,
@@ -7820,11 +7820,11 @@
                                                                            } ],
                                                     "momentary_positions": "none",
                                                                 "outputs": [ {
-                                                                                   "address": 12508,
+                                                                                   "address": 12488,
                                                                                "description": "selector position",
-                                                                                      "mask": 7,
+                                                                                      "mask": 1792,
                                                                                  "max_value": 7,
-                                                                                  "shift_by": 0,
+                                                                                  "shift_by": 8,
                                                                                     "suffix": "",
                                                                                       "type": "integer"
                                                                            } ],
@@ -7845,11 +7845,11 @@
                                                                            } ],
                                                     "momentary_positions": "none",
                                                                 "outputs": [ {
-                                                                                   "address": 12506,
+                                                                                   "address": 12488,
                                                                                "description": "selector position",
-                                                                                      "mask": 57344,
+                                                                                      "mask": 224,
                                                                                  "max_value": 4,
-                                                                                  "shift_by": 13,
+                                                                                  "shift_by": 5,
                                                                                     "suffix": "",
                                                                                       "type": "integer"
                                                                            } ],
@@ -7864,7 +7864,7 @@
                                                      "identifier": "PSV_DERIVE",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12514,
+                                                                           "address": 12494,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
@@ -7880,7 +7880,7 @@
                                                      "identifier": "PSV_EL_D_EXT",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12516,
+                                                                           "address": 12496,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
@@ -7896,7 +7896,7 @@
                                                      "identifier": "PSV_EL_D_INT",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12518,
+                                                                           "address": 12498,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
@@ -7912,7 +7912,7 @@
                                                      "identifier": "PSV_EL_G_EXT",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12510,
+                                                                           "address": 12490,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
@@ -7928,7 +7928,7 @@
                                                      "identifier": "PSV_EL_G_INT",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12512,
+                                                                           "address": 12492,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
@@ -7959,11 +7959,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 16,
+                                                                                            "mask": 4096,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 4,
+                                                                                        "shift_by": 12,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -7988,11 +7988,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 32768,
+                                                                                            "mask": 128,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 15,
+                                                                                        "shift_by": 7,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8017,11 +8017,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 1,
+                                                                                            "mask": 256,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 0,
+                                                                                        "shift_by": 8,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8046,11 +8046,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 2,
+                                                                                            "mask": 512,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 1,
+                                                                                        "shift_by": 9,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8063,11 +8063,11 @@
                                                             "identifier": "RAD_A",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12524,
+                                                                                  "address": 12506,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 2048,
+                                                                                     "mask": 8,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 11,
+                                                                                 "shift_by": 3,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8087,11 +8087,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 1536,
+                                                                                            "mask": 12,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 9,
+                                                                                        "shift_by": 2,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8113,7 +8113,7 @@
                                                                               "suggested_step": 3200
                                                                           } ],
                                                                "outputs": [ {
-                                                                                  "address": 12520,
+                                                                                  "address": 12502,
                                                                               "description": "position of the potentiometer",
                                                                                      "mask": 65535,
                                                                                 "max_value": 65535,
@@ -8129,11 +8129,11 @@
                                                             "identifier": "RAD_DEC",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12524,
+                                                                                  "address": 12506,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 4096,
+                                                                                     "mask": 16,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 12,
+                                                                                 "shift_by": 4,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8157,11 +8157,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 16384,
+                                                                                            "mask": 64,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 14,
+                                                                                        "shift_by": 6,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8183,7 +8183,7 @@
                                                                               "suggested_step": 3200
                                                                           } ],
                                                                "outputs": [ {
-                                                                                  "address": 12522,
+                                                                                  "address": 12504,
                                                                               "description": "position of the potentiometer",
                                                                                      "mask": 65535,
                                                                                 "max_value": 65535,
@@ -8211,11 +8211,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 4,
+                                                                                            "mask": 1024,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 2,
+                                                                                        "shift_by": 10,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8236,11 +8236,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12488,
                                                                                      "description": "selector position",
-                                                                                            "mask": 24,
+                                                                                            "mask": 6144,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 3,
+                                                                                        "shift_by": 11,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8261,11 +8261,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 192,
+                                                                                            "mask": 49152,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 6,
+                                                                                        "shift_by": 14,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8278,11 +8278,11 @@
                                                             "identifier": "RAD_PSIC",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12524,
+                                                                                  "address": 12506,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 16384,
+                                                                                     "mask": 64,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 14,
+                                                                                 "shift_by": 6,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8302,11 +8302,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12488,
                                                                                      "description": "selector position",
-                                                                                            "mask": 96,
+                                                                                            "mask": 24576,
                                                                                        "max_value": 3,
-                                                                                        "shift_by": 5,
+                                                                                        "shift_by": 13,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8332,11 +8332,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 8192,
+                                                                                            "mask": 32,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 13,
+                                                                                        "shift_by": 5,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8357,11 +8357,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12506,
                                                                                      "description": "selector position",
-                                                                                            "mask": 768,
+                                                                                            "mask": 3,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 8,
+                                                                                        "shift_by": 0,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8382,11 +8382,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 384,
+                                                                                            "mask": 3,
                                                                                        "max_value": 2,
-                                                                                        "shift_by": 7,
+                                                                                        "shift_by": 0,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8412,11 +8412,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 4096,
+                                                                                            "mask": 16,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 12,
+                                                                                        "shift_by": 4,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8429,11 +8429,11 @@
                                                             "identifier": "RAD_VAL",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12524,
+                                                                                  "address": 12506,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 1024,
+                                                                                     "mask": 4,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 10,
+                                                                                 "shift_by": 2,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8445,11 +8445,11 @@
                                                             "identifier": "RAD_VISU",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12524,
+                                                                                  "address": 12506,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 8192,
+                                                                                     "mask": 32,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 13,
+                                                                                 "shift_by": 5,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8473,11 +8473,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12508,
+                                                                                         "address": 12488,
                                                                                      "description": "selector position",
-                                                                                            "mask": 2048,
+                                                                                            "mask": 32768,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 11,
+                                                                                        "shift_by": 15,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8502,11 +8502,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 32,
+                                                                                            "mask": 8192,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 5,
+                                                                                        "shift_by": 13,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8531,11 +8531,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12524,
+                                                                                         "address": 12500,
                                                                                      "description": "selector position",
-                                                                                            "mask": 8,
+                                                                                            "mask": 2048,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 3,
+                                                                                        "shift_by": 11,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -8562,11 +8562,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12524,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 32768,
+                                                                                         "mask": 128,
                                                                                     "max_value": 1,
-                                                                                     "shift_by": 15,
+                                                                                     "shift_by": 7,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8591,11 +8591,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12526,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 16,
+                                                                                         "mask": 4096,
                                                                                     "max_value": 1,
-                                                                                     "shift_by": 4,
+                                                                                     "shift_by": 12,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8620,11 +8620,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12526,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 1,
+                                                                                         "mask": 256,
                                                                                     "max_value": 1,
-                                                                                     "shift_by": 0,
+                                                                                     "shift_by": 8,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8645,11 +8645,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12526,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 96,
+                                                                                         "mask": 24576,
                                                                                     "max_value": 2,
-                                                                                     "shift_by": 5,
+                                                                                     "shift_by": 13,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8674,11 +8674,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12526,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 2,
+                                                                                         "mask": 512,
                                                                                     "max_value": 1,
-                                                                                     "shift_by": 1,
+                                                                                     "shift_by": 9,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8703,11 +8703,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12526,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 4,
+                                                                                         "mask": 1024,
                                                                                     "max_value": 1,
-                                                                                     "shift_by": 2,
+                                                                                     "shift_by": 10,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8732,11 +8732,11 @@
                                                                               } ],
                                                        "momentary_positions": "none",
                                                                    "outputs": [ {
-                                                                                      "address": 12526,
+                                                                                      "address": 12506,
                                                                                   "description": "selector position",
-                                                                                         "mask": 8,
+                                                                                         "mask": 2048,
                                                                                     "max_value": 1,
-                                                                                     "shift_by": 3,
+                                                                                     "shift_by": 11,
                                                                                        "suffix": "",
                                                                                          "type": "integer"
                                                                               } ],
@@ -8763,11 +8763,11 @@
                                                                           } ],
                                                    "momentary_positions": "none",
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "selector position",
-                                                                                     "mask": 256,
+                                                                                     "mask": 1,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 8,
+                                                                                 "shift_by": 0,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ],
@@ -8792,11 +8792,11 @@
                                                                           } ],
                                                    "momentary_positions": "none",
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "selector position",
-                                                                                     "mask": 512,
+                                                                                     "mask": 2,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 9,
+                                                                                 "shift_by": 1,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ],
@@ -8809,7 +8809,7 @@
                                                      "identifier": "OXY_NEEDLE",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12528,
+                                                                           "address": 12510,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
@@ -8837,11 +8837,11 @@
                                                                           } ],
                                                    "momentary_positions": "none",
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12506,
                                                                               "description": "selector position",
-                                                                                     "mask": 128,
+                                                                                     "mask": 32768,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 7,
+                                                                                 "shift_by": 15,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ],
@@ -8856,11 +8856,11 @@
                                                             "identifier": "RWR_BR",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 2048,
+                                                                                     "mask": 8,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 11,
+                                                                                 "shift_by": 3,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8872,11 +8872,11 @@
                                                             "identifier": "RWR_D2M",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 8192,
+                                                                                     "mask": 32,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 13,
+                                                                                 "shift_by": 5,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8888,11 +8888,11 @@
                                                             "identifier": "RWR_DA",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 4096,
+                                                                                     "mask": 16,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 12,
+                                                                                 "shift_by": 4,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8913,7 +8913,7 @@
                                                                               "suggested_step": 3200
                                                                           } ],
                                                                "outputs": [ {
-                                                                                  "address": 12530,
+                                                                                  "address": 12512,
                                                                               "description": "position of the potentiometer",
                                                                                      "mask": 65535,
                                                                                 "max_value": 65535,
@@ -8929,11 +8929,11 @@
                                                             "identifier": "RWR_LL",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 16384,
+                                                                                     "mask": 64,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 14,
+                                                                                 "shift_by": 6,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8945,11 +8945,11 @@
                                                             "identifier": "RWR_V",
                                                                 "inputs": [  ],
                                                                "outputs": [ {
-                                                                                  "address": 12526,
+                                                                                  "address": 12508,
                                                                               "description": "0 if light is off, 1 if light is on",
-                                                                                     "mask": 1024,
+                                                                                     "mask": 4,
                                                                                 "max_value": 1,
-                                                                                 "shift_by": 10,
+                                                                                 "shift_by": 2,
                                                                                    "suffix": "",
                                                                                      "type": "integer"
                                                                           } ]
@@ -8963,7 +8963,7 @@
                                                        "identifier": "SPEED_KTS_NEED",
                                                            "inputs": [  ],
                                                           "outputs": [ {
-                                                                             "address": 12532,
+                                                                             "address": 12514,
                                                                          "description": "gauge position",
                                                                                 "mask": 65535,
                                                                            "max_value": 65535,
@@ -8979,7 +8979,7 @@
                                                        "identifier": "SPEED_MACH",
                                                            "inputs": [  ],
                                                           "outputs": [ {
-                                                                             "address": 12534,
+                                                                             "address": 12516,
                                                                          "description": "gauge position",
                                                                                 "mask": 65535,
                                                                            "max_value": 65535,
@@ -9035,11 +9035,11 @@
                                                                            } ],
                                                     "momentary_positions": "none",
                                                                 "outputs": [ {
-                                                                                   "address": 12536,
+                                                                                   "address": 12508,
                                                                                "description": "selector position",
-                                                                                      "mask": 3,
+                                                                                      "mask": 384,
                                                                                  "max_value": 3,
-                                                                                  "shift_by": 0,
+                                                                                  "shift_by": 7,
                                                                                     "suffix": "",
                                                                                       "type": "integer"
                                                                            } ],
@@ -9064,11 +9064,11 @@
                                                                            } ],
                                                     "momentary_positions": "none",
                                                                 "outputs": [ {
-                                                                                   "address": 12536,
+                                                                                   "address": 12508,
                                                                                "description": "selector position",
-                                                                                      "mask": 4,
+                                                                                      "mask": 1024,
                                                                                  "max_value": 1,
-                                                                                  "shift_by": 2,
+                                                                                  "shift_by": 10,
                                                                                     "suffix": "",
                                                                                       "type": "integer"
                                                                            } ],
@@ -9095,11 +9095,11 @@
                                                                              } ],
                                                       "momentary_positions": "none",
                                                                   "outputs": [ {
-                                                                                     "address": 12536,
+                                                                                     "address": 12508,
                                                                                  "description": "selector position",
-                                                                                        "mask": 128,
+                                                                                        "mask": 32768,
                                                                                    "max_value": 1,
-                                                                                    "shift_by": 7,
+                                                                                    "shift_by": 15,
                                                                                       "suffix": "",
                                                                                         "type": "integer"
                                                                              } ],
@@ -9124,11 +9124,11 @@
                                                                              } ],
                                                       "momentary_positions": "none",
                                                                   "outputs": [ {
-                                                                                     "address": 12536,
+                                                                                     "address": 12508,
                                                                                  "description": "selector position",
-                                                                                        "mask": 64,
+                                                                                        "mask": 16384,
                                                                                    "max_value": 1,
-                                                                                    "shift_by": 6,
+                                                                                    "shift_by": 14,
                                                                                       "suffix": "",
                                                                                         "type": "integer"
                                                                              } ],
@@ -9141,11 +9141,11 @@
                                                         "identifier": "ELEC_FAIL",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12536,
+                                                                              "address": 12518,
                                                                           "description": "0 if light is off, 1 if light is on",
-                                                                                 "mask": 512,
+                                                                                 "mask": 2,
                                                                             "max_value": 1,
-                                                                             "shift_by": 9,
+                                                                             "shift_by": 1,
                                                                                "suffix": "",
                                                                                  "type": "integer"
                                                                       } ]
@@ -9165,11 +9165,11 @@
                                                                              } ],
                                                       "momentary_positions": "none",
                                                                   "outputs": [ {
-                                                                                     "address": 12536,
+                                                                                     "address": 12508,
                                                                                  "description": "selector position",
-                                                                                        "mask": 48,
+                                                                                        "mask": 12288,
                                                                                    "max_value": 2,
-                                                                                    "shift_by": 4,
+                                                                                    "shift_by": 12,
                                                                                       "suffix": "",
                                                                                         "type": "integer"
                                                                              } ],
@@ -9194,11 +9194,11 @@
                                                                              } ],
                                                       "momentary_positions": "none",
                                                                   "outputs": [ {
-                                                                                     "address": 12536,
+                                                                                     "address": 12518,
                                                                                  "description": "selector position",
-                                                                                        "mask": 256,
+                                                                                        "mask": 1,
                                                                                    "max_value": 1,
-                                                                                    "shift_by": 8,
+                                                                                    "shift_by": 0,
                                                                                       "suffix": "",
                                                                                         "type": "integer"
                                                                              } ],
@@ -9211,11 +9211,11 @@
                                                         "identifier": "HYD_FAIL",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12536,
+                                                                              "address": 12518,
                                                                           "description": "0 if light is off, 1 if light is on",
-                                                                                 "mask": 1024,
+                                                                                 "mask": 4,
                                                                             "max_value": 1,
-                                                                             "shift_by": 10,
+                                                                             "shift_by": 2,
                                                                                "suffix": "",
                                                                                  "type": "integer"
                                                                       } ]
@@ -9227,11 +9227,11 @@
                                                         "identifier": "TEST_ROUGE",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12536,
+                                                                              "address": 12518,
                                                                           "description": "0 if light is off, 1 if light is on",
-                                                                                 "mask": 2048,
+                                                                                 "mask": 8,
                                                                             "max_value": 1,
-                                                                             "shift_by": 11,
+                                                                             "shift_by": 3,
                                                                                "suffix": "",
                                                                                  "type": "integer"
                                                                       } ]
@@ -9243,11 +9243,11 @@
                                                         "identifier": "TEST_VERT",
                                                             "inputs": [  ],
                                                            "outputs": [ {
-                                                                              "address": 12536,
+                                                                              "address": 12518,
                                                                           "description": "0 if light is off, 1 if light is on",
-                                                                                 "mask": 4096,
+                                                                                 "mask": 16,
                                                                             "max_value": 1,
-                                                                             "shift_by": 12,
+                                                                             "shift_by": 4,
                                                                                "suffix": "",
                                                                                  "type": "integer"
                                                                       } ]
@@ -9344,11 +9344,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12540,
+                                                                                        "address": 12522,
                                                                                     "description": "selector position",
-                                                                                           "mask": 3072,
+                                                                                           "mask": 12,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 10,
+                                                                                       "shift_by": 2,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9369,7 +9369,7 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12536,
+                                                                                        "address": 12518,
                                                                                     "description": "selector position",
                                                                                            "mask": 57344,
                                                                                       "max_value": 4,
@@ -9394,11 +9394,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12538,
+                                                                                        "address": 12520,
                                                                                     "description": "selector position",
-                                                                                           "mask": 12288,
+                                                                                           "mask": 48,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 12,
+                                                                                       "shift_by": 4,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9411,7 +9411,7 @@
                                                            "identifier": "UVHF_PRESET",
                                                                "inputs": [  ],
                                                               "outputs": [ {
-                                                                                 "address": 12544,
+                                                                                 "address": 12526,
                                                                              "description": "gauge position",
                                                                                     "mask": 65535,
                                                                                "max_value": 65535,
@@ -9433,7 +9433,7 @@
                                                                              "suggested_step": 3200
                                                                          } ],
                                                               "outputs": [ {
-                                                                                 "address": 12542,
+                                                                                 "address": 12524,
                                                                              "description": "the rotation of the knob in the cockpit (not the value that is controlled by this knob!)",
                                                                                     "mask": 65535,
                                                                                "max_value": 65535,
@@ -9461,11 +9461,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12540,
+                                                                                        "address": 12522,
                                                                                     "description": "selector position",
-                                                                                           "mask": 512,
+                                                                                           "mask": 2,
                                                                                       "max_value": 1,
-                                                                                       "shift_by": 9,
+                                                                                       "shift_by": 1,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9490,11 +9490,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12540,
+                                                                                        "address": 12520,
                                                                                     "description": "selector position",
-                                                                                           "mask": 8,
+                                                                                           "mask": 2048,
                                                                                       "max_value": 1,
-                                                                                       "shift_by": 3,
+                                                                                       "shift_by": 11,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9519,11 +9519,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12540,
+                                                                                        "address": 12520,
                                                                                     "description": "selector position",
-                                                                                           "mask": 4,
+                                                                                           "mask": 1024,
                                                                                       "max_value": 1,
-                                                                                       "shift_by": 2,
+                                                                                       "shift_by": 10,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9536,7 +9536,7 @@
                                                            "identifier": "VHF_FREQUENCY",
                                                                "inputs": [  ],
                                                               "outputs": [ {
-                                                                                 "address": 12546,
+                                                                                 "address": 12528,
                                                                              "description": "O - UVHF - Frequency Report Display",
                                                                               "max_length": 6,
                                                                                   "suffix": "",
@@ -9564,11 +9564,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12552,
+                                                                                       "address": 12522,
                                                                                    "description": "selector position",
-                                                                                          "mask": 2,
+                                                                                          "mask": 512,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 1,
+                                                                                      "shift_by": 9,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -9589,11 +9589,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12552,
+                                                                                       "address": 12522,
                                                                                    "description": "selector position",
-                                                                                          "mask": 24,
+                                                                                          "mask": 6144,
                                                                                      "max_value": 2,
-                                                                                      "shift_by": 3,
+                                                                                      "shift_by": 11,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -9606,7 +9606,7 @@
                                                           "identifier": "UHF_FREQUENCY",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12558,
+                                                                                "address": 12538,
                                                                             "description": "O - UHF - Frequency Report Display",
                                                                              "max_length": 6,
                                                                                  "suffix": "",
@@ -9628,11 +9628,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12540,
+                                                                                       "address": 12522,
                                                                                    "description": "selector position",
-                                                                                          "mask": 28672,
+                                                                                          "mask": 112,
                                                                                      "max_value": 4,
-                                                                                      "shift_by": 12,
+                                                                                      "shift_by": 4,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -9645,7 +9645,7 @@
                                                           "identifier": "UHF_PRESET",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12556,
+                                                                                "address": 12536,
                                                                             "description": "gauge position",
                                                                                    "mask": 65535,
                                                                               "max_value": 65535,
@@ -9667,7 +9667,7 @@
                                                                             "suggested_step": 3200
                                                                         } ],
                                                              "outputs": [ {
-                                                                                "address": 12554,
+                                                                                "address": 12534,
                                                                             "description": "the rotation of the knob in the cockpit (not the value that is controlled by this knob!)",
                                                                                    "mask": 65535,
                                                                               "max_value": 65535,
@@ -9695,11 +9695,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12540,
+                                                                                       "address": 12522,
                                                                                    "description": "selector position",
-                                                                                          "mask": 32768,
+                                                                                          "mask": 128,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 15,
+                                                                                      "shift_by": 7,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -9724,11 +9724,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12552,
+                                                                                       "address": 12522,
                                                                                    "description": "selector position",
-                                                                                          "mask": 1,
+                                                                                          "mask": 256,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 0,
+                                                                                      "shift_by": 8,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -9753,11 +9753,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12552,
+                                                                                       "address": 12522,
                                                                                    "description": "selector position",
-                                                                                          "mask": 4,
+                                                                                          "mask": 1024,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 2,
+                                                                                      "shift_by": 10,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -9814,11 +9814,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12552,
+                                                                                         "address": 12522,
                                                                                      "description": "selector position",
-                                                                                            "mask": 64,
+                                                                                            "mask": 16384,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 6,
+                                                                                        "shift_by": 14,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -9843,11 +9843,11 @@
                                                                                  } ],
                                                           "momentary_positions": "none",
                                                                       "outputs": [ {
-                                                                                         "address": 12552,
+                                                                                         "address": 12544,
                                                                                      "description": "selector position",
-                                                                                            "mask": 256,
+                                                                                            "mask": 1,
                                                                                        "max_value": 1,
-                                                                                        "shift_by": 8,
+                                                                                        "shift_by": 0,
                                                                                           "suffix": "",
                                                                                             "type": "integer"
                                                                                  } ],
@@ -9870,11 +9870,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 12,
+                                                                                           "mask": 3072,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 2,
+                                                                                       "shift_by": 10,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9895,11 +9895,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12546,
                                                                                     "description": "selector position",
-                                                                                           "mask": 49152,
+                                                                                           "mask": 192,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 14,
+                                                                                       "shift_by": 6,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9920,11 +9920,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12546,
                                                                                     "description": "selector position",
-                                                                                           "mask": 3072,
+                                                                                           "mask": 12,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 10,
+                                                                                       "shift_by": 2,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9945,11 +9945,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 192,
+                                                                                           "mask": 49152,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 6,
+                                                                                       "shift_by": 14,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9970,11 +9970,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 3,
+                                                                                           "mask": 768,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 0,
+                                                                                       "shift_by": 8,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -9995,11 +9995,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12546,
                                                                                     "description": "selector position",
-                                                                                           "mask": 768,
+                                                                                           "mask": 3,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 8,
+                                                                                       "shift_by": 0,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -10020,11 +10020,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12546,
                                                                                     "description": "selector position",
-                                                                                           "mask": 12288,
+                                                                                           "mask": 48,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 12,
+                                                                                       "shift_by": 4,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -10045,11 +10045,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12564,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 48,
+                                                                                           "mask": 12288,
                                                                                       "max_value": 2,
-                                                                                       "shift_by": 4,
+                                                                                       "shift_by": 12,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -10074,11 +10074,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12552,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 1024,
+                                                                                           "mask": 4,
                                                                                       "max_value": 1,
-                                                                                       "shift_by": 10,
+                                                                                       "shift_by": 2,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -10148,11 +10148,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12552,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 2048,
+                                                                                           "mask": 8,
                                                                                       "max_value": 1,
-                                                                                       "shift_by": 11,
+                                                                                       "shift_by": 3,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -10177,11 +10177,11 @@
                                                                                 } ],
                                                          "momentary_positions": "none",
                                                                      "outputs": [ {
-                                                                                        "address": 12552,
+                                                                                        "address": 12544,
                                                                                     "description": "selector position",
-                                                                                           "mask": 512,
+                                                                                           "mask": 2,
                                                                                       "max_value": 1,
-                                                                                       "shift_by": 9,
+                                                                                       "shift_by": 1,
                                                                                          "suffix": "",
                                                                                            "type": "integer"
                                                                                 } ],
@@ -10223,11 +10223,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12546,
                                                                                    "description": "selector position",
-                                                                                          "mask": 4,
+                                                                                          "mask": 1024,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 2,
+                                                                                      "shift_by": 10,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10252,11 +10252,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12546,
                                                                                    "description": "selector position",
-                                                                                          "mask": 2,
+                                                                                          "mask": 512,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 1,
+                                                                                      "shift_by": 9,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10275,7 +10275,7 @@
                                                                             "suggested_step": 3200
                                                                         } ],
                                                              "outputs": [ {
-                                                                                "address": 12570,
+                                                                                "address": 12550,
                                                                             "description": "the rotation of the knob in the cockpit (not the value that is controlled by this knob!)",
                                                                                    "mask": 65535,
                                                                               "max_value": 65535,
@@ -10304,11 +10304,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12546,
                                                                                    "description": "selector position",
-                                                                                          "mask": 8,
+                                                                                          "mask": 2048,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 3,
+                                                                                      "shift_by": 11,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10333,11 +10333,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12546,
                                                                                    "description": "selector position",
-                                                                                          "mask": 1,
+                                                                                          "mask": 256,
                                                                                      "max_value": 1,
-                                                                                      "shift_by": 0,
+                                                                                      "shift_by": 8,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10358,11 +10358,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12546,
                                                                                    "description": "selector position",
-                                                                                          "mask": 48,
+                                                                                          "mask": 12288,
                                                                                      "max_value": 2,
-                                                                                      "shift_by": 4,
+                                                                                      "shift_by": 12,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10383,11 +10383,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12546,
                                                                                    "description": "selector position",
-                                                                                          "mask": 192,
+                                                                                          "mask": 49152,
                                                                                      "max_value": 2,
-                                                                                      "shift_by": 6,
+                                                                                      "shift_by": 14,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10400,11 +10400,11 @@
                                                           "identifier": "HUD_REC",
                                                               "inputs": [  ],
                                                              "outputs": [ {
-                                                                                "address": 12568,
+                                                                                "address": 12554,
                                                                             "description": "0 if light is off, 1 if light is on",
-                                                                                   "mask": 1024,
+                                                                                   "mask": 4,
                                                                               "max_value": 1,
-                                                                               "shift_by": 10,
+                                                                               "shift_by": 2,
                                                                                  "suffix": "",
                                                                                    "type": "integer"
                                                                         } ]
@@ -10422,7 +10422,7 @@
                                                                             "suggested_step": 3200
                                                                         } ],
                                                              "outputs": [ {
-                                                                                "address": 12566,
+                                                                                "address": 12548,
                                                                             "description": "the rotation of the knob in the cockpit (not the value that is controlled by this knob!)",
                                                                                    "mask": 65535,
                                                                               "max_value": 65535,
@@ -10446,11 +10446,11 @@
                                                                                } ],
                                                         "momentary_positions": "none",
                                                                     "outputs": [ {
-                                                                                       "address": 12568,
+                                                                                       "address": 12554,
                                                                                    "description": "selector position",
-                                                                                          "mask": 768,
+                                                                                          "mask": 3,
                                                                                      "max_value": 2,
-                                                                                      "shift_by": 8,
+                                                                                      "shift_by": 0,
                                                                                         "suffix": "",
                                                                                           "type": "integer"
                                                                                } ],
@@ -10472,7 +10472,7 @@
                                                                             "suggested_step": 3200
                                                                         } ],
                                                              "outputs": [ {
-                                                                                "address": 12572,
+                                                                                "address": 12552,
                                                                             "description": "position of the potentiometer",
                                                                                    "mask": 65535,
                                                                               "max_value": 65535,
@@ -10490,7 +10490,7 @@
                                                      "identifier": "VARIO_NEEDLE",
                                                          "inputs": [  ],
                                                         "outputs": [ {
-                                                                           "address": 12574,
+                                                                           "address": 12556,
                                                                        "description": "gauge position",
                                                                               "mask": 65535,
                                                                          "max_value": 65535,
