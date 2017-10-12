@@ -1,6 +1,41 @@
--- 2017 --
--- M-2000C DCS-BIOS LIBRARY V1.15 by EXO7 --
--- Thanks to Ergo for his help --
+-----------------------------------------------------------
+--  ____   ____ ____    ____ ___ ___  ____  
+-- |  _ \ / ___/ ___|  | __ |_ _/ _ \/ ___| 
+-- | | | | |   \___ \  |  _ \| | | | \___ \ 
+-- | |_| | |___ ___) | | |_) | | |_| |___) |
+-- |____/ \____|____/  |____|___\___/|____/ 
+--                                          
+--     LIBRARY     	:    Mirage 2000C RAZBAM
+--     CONTIBUTORS 	:    Exo7, Ergo 
+--     LINK        	:    https://github.com/Exo7/DCS_BIOS-M2000C_Library/releases/latest
+--     VERSION     	:    v1.15
+--
+-----------------------------------------------------------
+-- Release log : 
+-- v1.12 by Exo7 
+--      Original stuff
+-- 
+-- v1.12-mod-Ergo-1 by Ergo
+--      Adding INS Parameter Selector 
+--      Adding INS VAL Button 
+--
+-- v1.12-mod-Ergo-2 by Ergo
+--      Adding all PCN text in PCN_DISP
+--
+-- v1.13 by Exo7
+--		Adding / Matching New variables
+--		Adding new categories
+--
+-- v1.14 by Exo7
+--		Adding ECM BOX displays
+--		Adding PPA displays
+--		Optimising "getDisplay" functions
+--
+-- v1.15 by Exo7
+--		Adding PCA displays
+--
+-----------------------------------------------------------
+
 
 BIOS.protocol.beginModule("M-2000C", 0x3000)
 BIOS.protocol.setExportModuleAircrafts({"M-2000C"})
@@ -260,7 +295,6 @@ local function getPCABR5Disp()
 	return PcaBR5
 end
 
-
 local function getIRDisp()
 	local ind = parse_indication(3)
 	if ind == nil then return "   " end	
@@ -343,6 +377,7 @@ function defineiCommand(msg, iCommand_id, arg_number, category, description)
 end
 
 
+-- ADI
 defineToggleSwitch("ADI_CAGE_LEV", 0, 3314, 314, "ADI", "I - ADI - Cage Lever")
 defineToggleSwitch("ADI_BKL_SW", 0, 3315, 315, "ADI", "I - ADI - Backlight Switch")
 defineFloat("ADI_PITCH", 316, {0, 1}, "ADI", "O - ADI - Pitch Position")
@@ -352,9 +387,13 @@ defineFloat("ADI_FLAG", 319, {0, 1}, "ADI", "O - ADI - Flag")
 defineFloat("ADI_LIGHT", 321, {0, 1}, "ADI", "O - ADI - Voyant Ambre sous")
 defineFloat("ADI_ILS_V", 322, {0, 1}, "ADI", "O - ADI - Vertical ILS Needle")
 defineFloat("ADI_ILS_H", 323, {0, 1}, "ADI", "O - ADI - Horizontal ILS Needle")
+
+-- AIR FLOW PANEL (BECS, PELLES, SOURIS)
 defineToggleSwitch("INTAKE_SLATS_OP_SW", 3, 3460, 460, "AIR FLOW PANEL", "I - Intake Slats Operation Switch (PELLES)")
 defineToggleSwitch("CONES_OP_SW", 3, 3461, 461, "AIR FLOW PANEL", "I - Intake Cones Operation Switch (SOURIS)")
 defineTumb("SLATS_OP_SW", 14, 3462, 462, 1, {-1, 1}, nil, false, "AIR FLOW PANEL", "I - Slats Operation Switch (BECS)")
+
+-- ALTIMETER
 defineRotary("BARO_PRESS_CALIB", 0, 3309, 309, "ALTIMETER", "I - ALT - Barometric Pressure Calibration")
 defineFloat("ALT_NEEDLE", 305, {0, 1}, "ALTIMETER", "O - ALT - Needle")
 defineFloat("ALT_KCENTS", 306, {0, 1}, "ALTIMETER", "O - ALT - x10 000 ft display")
@@ -364,8 +403,12 @@ defineFloat("ALT_BARO_THOUS", 310, {0, 1}, "ALTIMETER", "O - ALT - x1000 Baro Pr
 defineFloat("ALT_BARO_CENTS", 311, {0, 1}, "ALTIMETER", "O - ALT - x100 Baro Press display")
 defineFloat("ALT_BARO_TENS", 312, {0, 1}, "ALTIMETER", "O - ALT - x10 Baro Press display")
 defineFloat("ALT_BARO_ONES", 313, {0, 1}, "ALTIMETER", "O - ALT - x1 Baro Press display")
+
+-- AOA
 defineFloat("AOA_POS", 331, {0, 1}, "AOA", "O - AOA - Indicator")
 defineFloat("AOA_FLAG", 332, {0, 1}, "AOA", "O - AOA - Flag")
+
+-- AUDIO PANEL
 defineToggleSwitch("AMPLIS_SEL_KNOB", 16, 3700, 700, "AUDIO PANEL", "I - AMPLIS Selector Knob")
 definePotentiometer("VORILS_VOL_KNOB", 16, 3701, 701, {0, 1}, "AUDIO PANEL", "I - VOR/ILS Volume Knob")
 definePotentiometer("TAC_VOL_KNOB", 16, 3702, 702, {0, 1}, "AUDIO PANEL", "I - TACAN Volume Knob")
@@ -374,6 +417,8 @@ definePotentiometer("TB_APP_VOL_KNOB", 16, 3704, 704, {0, 1}, "AUDIO PANEL", "I 
 definePotentiometer("MRK_SIG_VOL_KNOB", 16, 3705, 705, {0, 1}, "AUDIO PANEL", "I - Marker Signal Volume Knob")
 definePotentiometer("UHF_RADIO_VOL_KNOB", 16, 3706, 706, {0, 1}, "AUDIO PANEL", "I - UHF - Radio Volume Knob")
 definePotentiometer("VUHF_RADIO_VOL_KNOB", 16, 3707, 707, {0, 1}, "AUDIO PANEL", "I - U/VHF - Radio Volume Knob")
+
+-- AUTOPILOT
 definePushButton("AP_MASTER_BTN", 17, 3282, 282, "AUTOPILOT", "I - Autopilot Master Button")
 definePushButton("ALT_HOLD_BTN", 17, 3285, 285, "AUTOPILOT", "I - Altitude Hold Button")
 definePushButton("SEL_ALT_HOLD_BTN", 17, 3288, 288, "AUTOPILOT", "I - Selected Altitude Hold Button")
@@ -394,11 +439,15 @@ defineIndicatorLight("AP_L_VERT", 295, "AUTOPILOT", "O - AP - L Green Light")
 defineIndicatorLight("AP_L_AMBRE", 296, "AUTOPILOT", "O - AP - L Amber Light")
 defineIndicatorLight("AP_G_VERT", 297, "AUTOPILOT", "O - AP - G Green Light")
 defineIndicatorLight("AP_G_AMBRE", 298, "AUTOPILOT", "O - AP - G Amber Light")
+
+-- BACKUP ADI
 defineToggleSwitch("SB_ADI_CAGE_SW", 0, 3325, 325, "BACKUP ADI", "I - BKADI - UNCAGE")
 defineRotary("SB_ADI_ROT", 0, 3328, 328, "BACKUP ADI", "I - BKADI - Set")
 defineFloat("SB_ADI_ROLL", 326, {0, 1}, "BACKUP ADI", "O - BKADI - Roll Position")
 defineFloat("SB_ADI_PITCH", 327, {0, 1}, "BACKUP ADI", "O - BKADI - Pitch Position")
 defineFloat("SB_ADI_FLAG", 329, {0, 1}, "BACKUP ADI", "O - BKADI - Flag")
+
+-- CAUTION LIGHT PANEL
 defineIndicatorLight("CLP_BATT", 525, "CAUTION LIGHT PANEL", "O - CLP - BATT Indicator Indicator Light")
 defineIndicatorLight("CLP_TRN", 526, "CAUTION LIGHT PANEL", "O - CLP - TR Indicator Indicator Light")
 defineIndicatorLight("CLP_ALT_1", 527, "CAUTION LIGHT PANEL", "O - CLP - ALT.1 Indicator Indicator Light")
@@ -438,15 +487,21 @@ defineIndicatorLight("CLP_GAIN", 560, "CAUTION LIGHT PANEL", "O - CLP - GAIN Ind
 defineIndicatorLight("CLP_RPM", 561, "CAUTION LIGHT PANEL", "O - CLP - RPM Indicator Light")
 defineIndicatorLight("CLP_DECOL", 562, "CAUTION LIGHT PANEL", "O - CLP - DECOL Indicator Light")
 defineIndicatorLight("CLP_PARK", 563, "CAUTION LIGHT PANEL", "O - CLP - PARK Indicator Light")
+
+-- ELECTRIC PANEL
 defineToggleSwitch("MAIN_BATT_SW", 8, 3520, 520, "ELECTRIC PANEL", "I - Main Battery Switch")
 defineToggleSwitch("ELEC_PWR_TRANSF_SW", 8, 3521, 521, "ELECTRIC PANEL", "I - Electric Power Transfer Switch")
 defineToggleSwitch("ALT_1_SW", 8, 3522, 522, "ELECTRIC PANEL", "I - Alternator 1 Switch")
 defineToggleSwitch("ALT_2_SW", 8, 3523, 523, "ELECTRIC PANEL", "I - Alternator 2 Switch")
 defineTumb("LGT_TEST_SW", 8, 3524, 524, 1, {-1, 1}, nil, false, "ELECTRIC PANEL", "I - Lights Test Switch")
+
+-- CLOCK
 defineToggleSwitch("COC_CLOCK", 22, 3400, 400, "CLOCK", "I - CLOCK - Cockpit Clock Position")
 defineFloat("CLK_H", 401, {0, 1}, "CLOCK", "O - CLOCK - Hours Needle")
 defineFloat("CLK_M", 402, {0, 1}, "CLOCK", "O - CLOCK - Minutes Needle")
 defineFloat("CLK_S", 403, {0, 1}, "CLOCK", "O - CLOCK - Seconds Needle")
+
+-- CONFIGURATION PANEL
 defineIndicatorLight("CONF_A", 410, "CONFIGURATION PANEL", "O - CONF - A Light")
 defineIndicatorLight("CONF_F", 411, "CONFIGURATION PANEL", "O - CONF - F Light")
 defineIndicatorLight("CONF_DIRAV", 412, "CONFIGURATION PANEL", "O - CONF - DIRAV Light")
@@ -457,10 +512,16 @@ defineIndicatorLight("CONF_ROUGE", 416, "CONFIGURATION PANEL", "O - CONF - Red L
 defineIndicatorLight("CONF_G", 417, "CONFIGURATION PANEL", "O - CONF - Left Landing Gear Light")
 defineIndicatorLight("CONF_AUX", 418, "CONFIGURATION PANEL", "O - CONF - Aux Landing Gear Light")
 defineIndicatorLight("CONF_D", 419, "CONFIGURATION PANEL", "O - CONF - Right Landing Gear Light")
+
+-- ECM BOX
 defineToggleSwitch("ECM_BOX_SW", 13, 3195, 195, "ECM BOX", "I - ECM Box Switch")
 defineToggleSwitch("ECM_BOX_LGT_SW", 13, 3196, 196, "ECM BOX", "I - ECM Box Lights Switch")
 defineTumb("ECM_BOX_MODE_SW", 13, 3194, 194, 0.5, {0, 1}, nil, false, "ECM BOX", "I - ECM Box Mode Switch")
 defineTumb("ECM_BOX_LCD_BRIGHT", 13, 3197, 197, 0.2, {0, 1}, nil, false, "ECM BOX", "I - ECM Box LCD Display Brightness")
+defineString("ECM_FLR_DISP", getIRDisp, 2, "ECM BOX", "O - ECM Box FLR Display")
+defineString("ECM_EM_DISP", getEMDisp, 3, "ECM BOX", "O - ECM Box EM Display")
+
+--ENVIRONMENT CONTROL PANEL
 defineToggleSwitch("ECS_MAIN_MODE_SW", 0, 3630, 630, "ECS PANEL", "I - ECS Main Mode Switch")
 defineToggleSwitch("ECS_C_BTN", 0, 3631, 631, "ECS PANEL", "I - ECS C Button")
 defineToggleSwitch("ECS_F_BTN", 0, 3633, 633, "ECS PANEL", "I - ECS F Button")
@@ -470,10 +531,14 @@ defineRotary("ECS_TEMP_SELECT_KNOB", 0, 3637, 637, "ECS PANEL", "I - ECS Tempera
 defineToggleSwitch("ECS_DEFOG_SW", 0, 3638, 638, "ECS PANEL", "I - ECS Defog Switch")
 defineIndicatorLight("CLIM_C", 632, "ECS PANEL", "O - ECS - C Light")
 defineIndicatorLight("CLIM_F", 634, "ECS PANEL", "O - ECS - F Light")
+
+-- ENGINE GAUGE
 defineFloat("N_RPM", 369, {0, 1}, "ENGINE GAUGE", "O - ENG - RPM Needle")
 defineFloat("T7_NEEDLE", 370, {0, 1}, "ENGINE GAUGE", "O - ENG - Tt7 Needle")
 defineFloat("RPM_TENS", 371, {0, 1}, "ENGINE GAUGE", "O - ENG - x10 RPM display")
 defineFloat("RPM_ONES", 372, {0, 1}, "ENGINE GAUGE", "O - ENG - x1 RPM display")
+
+-- ENGINE START PANEL
 defineToggleSwitch("ENG_SHUTDOWN_BTN", 7, 3467, 467, "ENGINE START PANEL", "I - Engine Shutdown Button")
 defineToggleSwitch("ENG_START_SW_COV", 7, 3645, 645, "ENGINE START PANEL", "I - Engine Start Switch Cover")
 defineToggleSwitch("START_FUEL_PUMP_SW", 7, 3646, 646, "ENGINE START PANEL", "I - Starter Fuel Pump Switch")
@@ -483,18 +548,24 @@ definePushButton("ENG_START_SW", 7, 3649, 649, "ENGINE START PANEL", "I - Engine
 defineToggleSwitch("FUEL_CUTOFF_SW_COV", 7, 3651, 651, "ENGINE START PANEL", "I - Fuel Cutoff Switch Cover")
 defineToggleSwitch("FUEL_CUTOFF_SW", 7, 3652, 652, "ENGINE START PANEL", "I - Fuel Cutoff Switch")
 defineTumb("VENT_SEL_SW", 7, 3650, 650, 0.5, {0, 1}, nil, false, "ENGINE START PANEL", "I - Ventilation Selector Switch")
+
+-- ELECTRONIC WAR PANEL
 defineTumb("BR_PWR_SW", 13, 3606, 606, 0.5, {0, 1}, nil, false, "EW PANEL", "I - BR Power Switch")
 defineTumb("RWR_PWR_SW", 13, 3607, 607, 0.5, {0, 1}, nil, false, "EW PANEL", "I - RWR Power Switch")
 defineTumb("D2M_PWR_SW", 13, 3608, 608, 0.5, {0, 1}, nil, false, "EW PANEL", "I - D2M Power Switch")
 defineTumb("DECOY_REL_MODE_SW", 13, 3609, 609, 0.5, {0, 1}, nil, false, "EW PANEL", "I - Decoy Release Mode Switch")
 defineTumb("DECOY_REL_PGM_KNOB", 13, 3610, 610, 0.1, {0, 1}, nil, false, "EW PANEL", "I - Decoy Release Program Knob")
 defineTumb("EW_MODE_SEL_SW", 13, 3605, 605, 1, {-1, 1}, nil, false, "EW PANEL", "I - EW Mode Selector Switch")
+
+-- EXTERIOR LIGHTS
 defineToggleSwitch("POLICE_LGT_SW", 16, 3449, 449, "EXT LIGHTS", "I - Police Lights Switch")
 defineToggleSwitch("ANTI-COL_LGT_SW", 16, 3453, 453, "EXT LIGHTS", "I - Anti-Collision Lights Switch")
 defineToggleSwitch("NAV_LGT_SW", 16, 3454, 454, "EXT LIGHTS", "I - Navigation Lights Switch")
 defineToggleSwitch("FORM_LGT_SW", 16, 3455, 455, "EXT LIGHTS", "I - Formation Lights Switch")
 definePotentiometer("REFUEL_LGT_BRIGHT_KNOB", 16, 3920, 920, {0, 1}, "EXT LIGHTS", "I - Refuel Lights Brightness Knob")
 defineTumb("LDG_LGT_SW", 16, 3450, 450, 1, {-1, 1}, nil, false, "EXT LIGHTS", "I - Landing Lights Switch")
+
+-- FUEL SYSTEM
 defineMultipositionSwitch("AAR_SW", 7, 3193, 193, 3, 0.5, "FUEL SYSTEM", "I - Air Refuel Transfer Switch")
 defineToggleSwitch("FUEL_DETOT_SW", 0, 3355, 355, "FUEL SYSTEM", "I - DETOT Switch")
 defineToggleSwitch("FUEL_CROF_SW", 4, 3357, 357, "FUEL SYSTEM", "I - Fuel Crossfeeed Switch")
@@ -519,7 +590,11 @@ defineIndicatorLight("FUEL_AV_D", 366, "FUEL SYSTEM", "O - FUEL - Right AV Light
 defineIndicatorLight("FUEL_V_G", 367, "FUEL SYSTEM", "O - FUEL - Left V Light")
 defineIndicatorLight("FUEL_V_D", 368, "FUEL SYSTEM", "O - FUEL - Right V Light")
 defineString("FUEL_FLOW", getFuelFlow, 3, "FUEL SYSTEM", "O - FUEL - Fuel Flow Display")
+
+-- ACCELEROMETER
 defineFloat("GMETER_NEEDLE", 347, {0, 1}, "G-METER", "O - ACC - G Needle")
+
+-- HSI
 defineRotary("HSI_VAD_SEL", 0, 3340, 340, "HSI", "I - HSI - VAD Selector")
 defineTumb("HSI_MODE_SEL_SW", 0, 3341, 341, 0.2, {0, 1}, nil, false, "HSI", "I - HSI - Mode Selector Switch")
 defineFloat("HSI_HDG", 333, {0, 1}, "HSI", "O - HSI - AP Heading (Green Arrow)")
@@ -534,6 +609,8 @@ defineFloat("HSI_FLAG_DIST", 343, {0, 1}, "HSI", "O - HSI - Distance Flag")
 defineFloat("HSI_FLAG_G", 344, {0, 1}, "HSI", "O - HSI - Left Flag")
 defineFloat("HSI_FLAG_D", 345, {0, 1}, "HSI", "O - HSI - Right Flag")
 defineFloat("HSI_FLAG_M", 346, {0, 1}, "HSI", "O - HSI - Center Flag")
+
+-- IFF
 defineMultipositionSwitch("RAD_IFF_MODE_SW", 11, 3598, 598, 6, 0.2, "IFF", "I - IFF_INT -  Mode Switch")
 defineMultipositionSwitch("RAD_IFF_POW_SW", 11, 3600, 600, 3, 0.5, "IFF", "I - IFF_INT -  Power Switch")
 defineToggleSwitch("RAD_IFF_L_R_SEL", 11, 3599, 599, "IFF", "I - IFF_INT -  L/R Selector")
@@ -556,6 +633,8 @@ defineToggleSwitch("MODE-C_SW", 0, 3387, 387, "IFF", "I - IFF_REP - Mode-C Switc
 defineToggleSwitch("IFF_M4_SW", 0, 3390, 390, "IFF", "I - IFF_REP - ON/OUT MODE 4 Switch")
 defineIndicatorLight("IFF_RED", 388, "IFF", "O - IFF_REP - Red Light")
 defineIndicatorLight("IFF_FAULT", 394, "IFF", "O - IFF_REP - Fault Light")
+
+-- INTERIOR LIGHTS
 definePotentiometer("LGT_BRIGHT_CTRL_TEST", 16, 3575, 575, {0, 1}, "INT LIGHTS", "I - Light Brightnes Control/Test")
 definePotentiometer("DASH_U.V._LGT_KNOB", 16, 3639, 639, {0, 1}, "INT LIGHTS", "I - Dashboard U.V. Lights Knob")
 definePotentiometer("DASH_PANEL_LGT_KNOB", 16, 3640, 640, {0, 1}, "INT LIGHTS", "I - Dashboard Panel Lights Knob")
@@ -563,6 +642,8 @@ definePotentiometer("RED_FLOOD_LGT_KNOB", 16, 3641, 641, {0, 1}, "INT LIGHTS", "
 definePotentiometer("CONS_PANEL_LGT_KNOB", 16, 3642, 642, {0, 1}, "INT LIGHTS", "I - Console Panel Lights Knob")
 definePotentiometer("CAUT_ADV_LGT", 16, 3643, 643, {0, 1}, "INT LIGHTS", "I - Caution/Advisory Lights Rheostat")
 definePotentiometer("WH_FLOOD_LGT_KNOB", 16, 3644, 644, {0, 1}, "INT LIGHTS", "I - White Flood Lights Knob")
+
+-- LEFT CONSOLE
 defineToggleSwitch("EMER_THROTTLE_COV", 7, 3464, 464, "LEFT CONSOLE", "I - Emergency Throttle Cover")
 definePotentiometer("EMER_THROTTLE_HAND", 7, 3465, 465, {0, 1}, "LEFT CONSOLE", "I - Emergency Throttle Handle")
 defineToggleSwitch("ENG_IN-FLGT_START_SW", 7, 3468, 468, "LEFT CONSOLE", "I - Engine In-Flight Start Switch")
@@ -578,6 +659,8 @@ defineToggleSwitch("ANTI-SKID_SW_COV", 22, 3458, 458, "LEFT CONSOLE", "I - Anti-
 defineToggleSwitch("ANTI-SKID_SW", 22, 3459, 459, "LEFT CONSOLE", "I - Anti-Skid Switch")
 defineToggleSwitch("SERPAM_REC_SW", 16, 3452, 452, "LEFT CONSOLE", "I - SERPAM Recorder Switch")
 defineToggleSwitch("MAGNETO_SW", 0, 3469, 469, "LEFT CONSOLE", "I - Magneto Switch")
+
+-- LEFT PANEL
 defineToggleSwitch("FBW_SPIN_MODE_SW", 3, 3330, 330, "LEFT PANEL", "I - FBW - Spin Mode Switch")
 defineToggleSwitch("LDG_LEV", 4, 3404, 404, "LEFT PANEL", "I - LDG - Landing Gear Lever")
 defineToggleSwitch("SAFE_GND_SW", 0, 3407, 407, "LEFT PANEL", "I - LDG - Safety Ground Override")
@@ -589,12 +672,21 @@ defineToggleSwitch("FBW_RESET_BTN", 17, 3423, 423, "LEFT PANEL", "I - FBW - Rese
 defineIndicatorLight("LANDING_GEAR_LEVER_LIGHT", 405, "LEFT PANEL", "O - LDG - Landing Gear Lever Light")
 definePushButton("EMER_JETT", 6, 3409, 409, "LEFT PANEL", "I - Emergency Jettison Button")
 defineToggleSwitch("GUN_ARM_SW", 6, 3463, 463, "LEFT PANEL", "I - Gun Arm/Safe Switch")
+defineFloat("PSV_EL_G_EXT", 424, {0, 1}, "LEFT PANEL", "O - PSV - Left Ext Elevon Position display")
+defineFloat("PSV_EL_G_INT", 425, {0, 1}, "LEFT PANEL", "O - PSV - Left Int Elevon Position display")
+defineFloat("PSV_DERIVE", 426, {0, 1}, "LEFT PANEL", "O - PSV - Rudder Position display")
+defineFloat("PSV_EL_D_EXT", 427, {0, 1}, "LEFT PANEL", "O - PSV - Right Ext Elevon Position display")
+defineFloat("PSV_EL_D_INT", 428, {0, 1}, "LEFT PANEL", "O - PSV - Right Int Elevon Position display")
+
+-- MAIN PANEL
 defineiCommand("AUDIO_WARN_RESET", 144, 191, "MAIN PANEL", "I - AL - Audio Warning Reset Button (PANNE)")
 defineIndicatorLight("MC_AMBRE", 199, "MAIN PANEL", "O - AL - Amber PANNE Button Light")
 defineIndicatorLight("MC_ROUGE", 200, "MAIN PANEL", "O - AL - Red PANNE Button Light")
 defineIndicatorLight("PC", 373, "MAIN PANEL", "O - AL - PC Light")
 defineIndicatorLight("FEU_SEC", 374, "MAIN PANEL", "O - AL - FEU SEC Light")
 defineIndicatorLight("DEM", 376, "MAIN PANEL", "O - AL - DEMARRAGE Light")
+
+-- MISCELANEOUS
 defineFloat("PRESS_NEEDLE", 399, {0, 1}, "MISCELANEOUS", "O - CAB - Cabine Press Needle")
 defineToggleSwitch("HYD_SYS_SEL", 14, 3395, 395, "MISCELANEOUS", "I - Hydraulic System Selector")
 defineToggleSwitch("NWS_IFF_INTERR_BTN", 22, 3807, 807, "MISCELANEOUS", "I - Nose Wheel Steering / IFF Interrogation Button")
@@ -609,6 +701,8 @@ defineToggleSwitch("CNPY_HAND2", 14, 3908, 908, "MISCELANEOUS", "I - Canopy Hand
 defineToggleSwitch("MIRROR_TOGGLE", 22, 3909, 909, "MISCELANEOUS", "I - Mirror Rendering Toggle")
 defineTumb("CNPY_REST", 14, 3655, 655, 1, {-1, 1}, nil, false, "MISCELANEOUS", "I - Canopy Rest")
 defineTumb("SEAT_ADJUST_SW", 22, 3900, 900, 1, {-1, 1}, nil, false, "MISCELANEOUS", "I - Seat Adjustment Switch")
+
+-- PCA
 defineiCommand("MASTER_ARM_SW", 283, 234, "PCA", "I - PCA - Master Arm Switch")
 definePushButton("PCA_BTN_1", 6, 3235, 235, "PCA", "I - PCA - Button 1")
 definePushButton("PCA_BTN_2", 6, 3237, 237, "PCA", "I - PCA - Button 2")
@@ -640,7 +734,20 @@ defineIndicatorLight("WEAPON_4_S", 260, "PCA", "O - PCA - Weapons Button 4 S Lig
 defineIndicatorLight("WEAPON_4_R", 261, "PCA", "O - PCA - Weapons Button 4 R Light")
 defineIndicatorLight("WEAPON_5_S", 263, "PCA", "O - PCA - Weapons Button 5 S Light")
 defineIndicatorLight("WEAPON_5_R", 264, "PCA", "O - PCA - Weapons Button 5 R Light")
-defineMultipositionSwitch("INS_PARAM_SEL", 9, 3574, 574, 11, 0.1, "PCN", "I - PCN - INS Parameter Selector")
+defineString("PCA_UR1_DISP", getPCAUR1Disp, 3, "PCA", "O - PCA Upper #1 Display")
+defineString("PCA_UR2_DISP", getPCAUR2Disp, 3, "PCA", "O - PCA Upper #2 Display")
+defineString("PCA_UR3_DISP", getPCAUR3Disp, 3, "PCA", "O - PCA Upper #3 Display")
+defineString("PCA_UR4_DISP", getPCAUR4Disp, 3, "PCA", "O - PCA Upper #4 Display")
+defineString("PCA_UR5_DISP", getPCAUR5Disp, 3, "PCA", "O - PCA Upper #5 Display")
+defineString("PCA_BR1_DISP", getPCABR1Disp, 3, "PCA", "O - PCA Bottom #1 Display")
+defineString("PCA_BR2_DISP", getPCABR2Disp, 3, "PCA", "O - PCA Bottom #2 Display")
+defineString("PCA_BR3_DISP", getPCABR3Disp, 3, "PCA", "O - PCA Bottom #3 Display")
+defineString("PCA_BR4_DISP", getPCABR4Disp, 3, "PCA", "O - PCA Bottom #4 Display")
+defineString("PCA_BR5_DISP", getPCABR5Disp, 3, "PCA", "O - PCA Bottom #5 Display")
+
+-- PCN
+defineMultipositionSwitch("INS_PARAM_SEL", 9, 3574, 574, 11, 0.1, "PCN", "I - PCN - INS Parameter Selector - MP_SW Variant")
+defineSetCommandTumb("INS_PARAM_SEL", 9, 3574, 574, 0.1, {0, 1.1}, nil, true, "PCN", " I - PCN - INS Parameter Selector - Rotary Variant") -- by Ergo
 definePushButton("INS_PREP_SW", 9, 3570, 570, "PCN", "I - PCN - PREP Switch")
 definePushButton("INS_DEST_SW", 9, 3572, 572, "PCN", "I - PCN - DEST Switch")
 defineToggleSwitch("OFFSET_WP_TGT", 9, 3576, 576, "PCN", "I - PCN - Offset Waypoint/Target (BAD)")
@@ -660,10 +767,12 @@ definePushButton("INS_BTN_0", 9, 3593, 593, "PCN", "I - PCN - Button 0")
 definePushButton("INS_CLR_BTN", 9, 3594, 594, "PCN", "I - PCN - EFF Button")
 definePushButton("INS_ENTER_BTN", 9, 3596, 596, "PCN", "I - PCN - INS Button")
 defineToggleSwitch("AUTO_NAV", 9, 3667, 667, "PCN", "I - PCN - AUTO Navigation (ENC)")
-defineString("PCN_DISP_DEST", getPCNDispDest, 2, "PCN", "O - PCN - DEST Display")
-defineString("PCN_DISP_L", getPCNDispL, 6, "PCN", "O - PCN - Left Display")
-defineString("PCN_DISP_PREP", getPCNDispPrep, 2, "PCN", "O - PCN - PREP Display")
-defineString("PCN_DISP_R", getPCNDispR, 7, "PCN", "O - PCN - Right Display")
+defineString("PCN_DISP_DEST", getPCNDispDest, 2, "PCN", "O - PCN - DEST Display") -- by Ergo
+defineString("PCN_DISP_L", getPCNDispL, 8, "PCN", "O - PCN - Left Display") -- by Ergo
+defineString("PCN_DISP_PREP", getPCNDispPrep, 2, "PCN", "O - PCN - PREP Display") -- by Ergo
+defineString("PCN_DISP_R", getPCNDispR, 9, "PCN", "O - PCN - Right Display") -- by Ergo
+defineString("PCN_DIS_DL", getPCNDigitL, 1, "PCN", "PCN Digit Left Display") -- by Ergo
+defineString("PCN_DIS_DR", getPCNDigitR, 1, "PCN", "PCN Digit Right Display") -- by Ergo
 defineIndicatorLight("PCN_PRET", 564, "PCN", "O - PCN - PRET Indicator Light")
 defineIndicatorLight("PCN_ALN", 565, "PCN", "O - PCN - ALN Indicator Light")
 defineIndicatorLight("PCN_MIP", 566, "PCN", "O - PCN - MIP Indicator Light")
@@ -678,6 +787,8 @@ defineIndicatorLight("PCN_VAL", 579, "PCN", "O - PCN - VAL Button Light")
 defineIndicatorLight("PCN_MRC", 580, "PCN", "O - PCN - MRC Button Light")
 defineIndicatorLight("INS_EFF_SW_LIGHT", 595, "PCN", "O - PCN - EFF Button Light")
 defineIndicatorLight("INS_INS_SW_LIGHT", 597, "PCN", "O - PCN - INS Button Light")
+
+-- PPA
 defineTumb("BOMB_FUZE_SEL_SW", 6, 3276, 276, 0.5, {0, 1}, nil, false, "PPA", "I - PPA - Bomb Fuze Selector Switch")
 definePushButton("S530_STANDBY", 6, 3266, 266, "PPA", "I - PPA - S530 Standby Button")
 definePushButton("AUTO_MAN_BTN", 6, 3269, 269, "PPA", "I - PPA - AUTO/MAN Button")
@@ -695,13 +806,15 @@ defineIndicatorLight("PPA_MAGIC_P", 274, "PPA", "O - PPA - MAGIC Light")
 defineIndicatorLight("PPA_MAGIC_MIS", 275, "PPA", "O - PPA - MAGIC MAG Light")
 defineIndicatorLight("PPA_GUN_ROCKET_PAP", 280, "PPA", "O - PPA - Gun/Rockets Mode PAR Indicator Light")
 defineIndicatorLight("PPA_GUN_ROCKET_TOT", 281, "PPA", "O - PPA - Gun/Rockets Mode TOT Indicator Light")
+defineString("PPA_QTY_DISP", getPPAQtyDisp, 2, "PPA", "O - PPA Quantity Display")
+defineString("PPA_QTY_DISP", getPPAIntDisp, 2, "PPA", "O - PPA Interval Display")
+
+-- PSM
 defineTumb("INS_OPAL_MODE", 9, 3629, 629, 0.1, {0, 0.4}, nil, false, "PSM", "I - PSM - INS Operational Mode")
 defineTumb("INS_MODE_SEL", 9, 3627, 627, 0.1, {0, 0.7}, nil, false, "PSM", "I - PSM - INS Mode Selector")
-defineFloat("PSV_EL_G_EXT", 424, {0, 1}, "PSV", "O - PSV - Left Ext Elevon Position display")
-defineFloat("PSV_EL_G_INT", 425, {0, 1}, "PSV", "O - PSV - Left Int Elevon Position display")
-defineFloat("PSV_DERIVE", 426, {0, 1}, "PSV", "O - PSV - Rudder Position display")
-defineFloat("PSV_EL_D_EXT", 427, {0, 1}, "PSV", "O - PSV - Right Ext Elevon Position display")
-defineFloat("PSV_EL_D_INT", 428, {0, 1}, "PSV", "O - PSV - Right Int Elevon Position display")
+
+
+-- RADAR
 defineTumb("RAD_ILLUM_SW", 11, 3481, 481, 0.5, {0, 1}, nil, false, "RADAR", "I - Radar Illumination Switch")
 defineTumb("RAD_PWR_SEL", 11, 3486, 486, 0.33, {0, 1}, nil, false, "RADAR", "I - Radar Power Selector")
 defineTumb("RAD_SCAN_LINES_SEL", 11, 3502, 502, 0.5, {0, 1}, nil, false, "RADAR", "I - Radar Scan Lines Selector")
@@ -726,6 +839,8 @@ defineIndicatorLight("RAD_A", 492, "RADAR", "O - RAD - A Button Light")
 defineIndicatorLight("RAD_DEC", 494, "RADAR", "O - RAD - DEC Button Light")
 defineIndicatorLight("RAD_VISU", 496, "RADAR", "O - RAD - VISU Button Light")
 defineIndicatorLight("RAD_PSIC", 505, "RADAR", "O - RAD - PSIC Button Light")
+
+-- RIGHT CONSOLE
 defineToggleSwitch("AUDIO_WARN_SW", 3, 3658, 658, "RIGHT CONSOLE", "I - AL - Audio Warning Switch")
 defineToggleSwitch("EMER_HYD_PUMP_SW", 3, 3657, 657, "RIGHT CONSOLE", "I - Emergency Hydraulic Pump Switch")
 defineToggleSwitch("PITOT_HEAT_COV", 0, 3659, 659, "RIGHT CONSOLE", "I - Pitot Heat Cover")
@@ -733,22 +848,32 @@ defineToggleSwitch("PITOT_HEAT_SW", 0, 3660, 660, "RIGHT CONSOLE", "I - Pitot He
 defineToggleSwitch("PKG_BRAKE_LEV", 22, 3666, 666, "RIGHT CONSOLE", "I - Parking Brake Lever")
 defineToggleSwitch("EMER_COMPASS", 9, 3905, 905, "RIGHT CONSOLE", "I - Emergency Compass")
 defineMultipositionSwitch("INS_AUX_HD_HOR", 9, 3665, 665, 3, 0.5, "RIGHT CONSOLE", "I - INS Auxiliary Heading/Horizon")
+
+-- RIGHT PANEL
 defineToggleSwitch("QRA_SW", 8, 3654, 654, "RIGHT PANEL", "I - Alert Network (QRA)")
 defineToggleSwitch("LOX_DIL_LEV", 25, 3910, 910, "RIGHT PANEL", "I - LOX Dilution Lever")
 defineToggleSwitch("LOX_EMER_SUP", 25, 3912, 912, "RIGHT PANEL", "I - LOX Emergency Supply")
 defineFloat("OXY_NEEDLE", 518, {0, 1}, "RIGHT PANEL", "O - LOX - Needle")
+
+-- RWR
 definePotentiometer("RWR_LGT_BRIGHT_CTRL", 16, 3228, 228, {0, 1}, "RWR", "I - RWR Light Brightnes Control")
 defineIndicatorLight("RWR_V", 229, "RWR", "O - RWR - V Indicator Indicator Light")
 defineIndicatorLight("RWR_BR", 230, "RWR", "O - RWR - BR Indicator Indicator Light")
 defineIndicatorLight("RWR_DA", 231, "RWR", "O - RWR - DA Indicator Indicator Light")
 defineIndicatorLight("RWR_D2M", 232, "RWR", "O - RWR - D2M Indicator Indicator Light")
 defineIndicatorLight("RWR_LL", 233, "RWR", "O - RWR - LL Indicator Indicator Light")
+
+--SPEED INDICATOR
 defineFloat("SPEED_KTS_NEED", 303, {0, 1}, "SPEED", "O - SPEED - Speed Needle")
 defineFloat("SPEED_MACH", 304, {0, 1}, "SPEED", "O - SPEED - Mach")
+
+-- TACAN
 defineTumb("TAC_MODE_SEL", 23, 3626, 626, 0.33, {0, 1}, nil, false, "TACAN", "I - TACAN Mode Select")
 defineBcdWheel("TAC_CH_10_SEL", 23, 623, nil, "TACAN", "I - TACAN Channel 10 Selector")
 defineToggleSwitch("TAC_X_Y_SEL", 23, 3624, 624, "TACAN", "I - TACAN X/Y Select")
 defineBcdWheel("TAC_CH_1_SEL", 23, 625, nil, "TACAN", "I - TACAN Channel 1 Selector")
+
+-- TEST PANEL
 defineMultipositionSwitch("FBW_TEST_SW", 17, 3517, 517, 3, 0.5, "TEST PANEL", "I - TEST - FBW Test Switch")
 defineToggleSwitch("AP_TEST_SW_COV", 17, 3514, 514, "TEST PANEL", "I - TEST - Autopilot Test Switch Cover")
 defineToggleSwitch("AP_TEST_SW", 17, 3515, 515, "TEST PANEL", "I - TEST - Autopilot Test Switch")
@@ -757,6 +882,8 @@ defineIndicatorLight("ELEC_FAIL", 510, "TEST PANEL", "O - TEST - ELEC Indicator 
 defineIndicatorLight("HYD_FAIL", 511, "TEST PANEL", "O - TEST - HYD Indicator Light")
 defineIndicatorLight("TEST_ROUGE", 512, "TEST PANEL", "O - TEST - Red Indicator Light")
 defineIndicatorLight("TEST_VERT", 513, "TEST PANEL", "O - TEST - Green Indicator Light")
+
+-- U/VHF RADIO
 defineTumb("UVHF_10_M_SEL", 19, 3441, 441, 0.1, {0, 1}, nil, true, "U/VHF RADIO", "I - UVHF - 10 MHz Selector")
 defineTumb("UVHF_1_M_SEL", 19, 3442, 442, 0.1, {0, 1}, nil, true, "U/VHF RADIO", "I - UVHF - 1 MHz Selector")
 defineTumb("UVHF_100_K_SEL", 19, 3443, 443, 0.1, {0, 1}, nil, true, "U/VHF RADIO", "I - UVHF - 100 KHz Selector")
@@ -776,6 +903,8 @@ defineToggleSwitch("UVHF_PWR_5W_25W_SW", 19, 3447, 447, "U/VHF RADIO", "I - UVHF
 defineTumb("UVHF_E+A2_SW", 19, 3438, 438, 1, {-1, 1}, nil, false, "U/VHF RADIO", "I - UVHF - E+A2 Switch")
 defineFloat("UVHF_PRESET", 445, {0, 1}, "U/VHF RADIO", "O - UVHF - PRESET Display")
 defineString("VHF_FREQUENCY", getVHFFrequency, 6, "U/VHF RADIO", "O - UVHF - Frequency Report Display")
+
+-- UHF RADIO
 defineTumb("UHF_MODE_SW", 20, 3433, 433, 0.25, {0, 1}, nil, false, "UHF RADIO", "I - UHF - Mode Selector")
 defineToggleSwitch("UHF_PWR_5W_25W_SW", 20, 3429, 429, "UHF RADIO", "I - UHF - Power 5W/25W Switch")
 defineToggleSwitch("UHF_SIL_SW", 20, 3430, 430, "UHF RADIO", "I - UHF - SIL Switch")
@@ -785,10 +914,14 @@ defineRotary("UHF_PRESET_KNOB", 20, 3435, 435, "UHF RADIO", "I - UHF - Preset Kn
 defineTumb("UHF_E+A2_SW", 20, 3431, 431, 1, {-1, 1}, nil, false, "UHF RADIO", "I - UHF - E+A2 Switch")
 defineFloat("UHF_PRESET", 435, {0, 1}, "UHF RADIO", "O - UHF - PRESET Display")
 defineString("UHF_FREQUENCY", getUHFFrequency, 6, "UHF RADIO", "O - UHF - Frequency Report Display")
+
+-- VOR / ILS
 defineBcdWheel("VORILS_FREQ_WHOLE", 24, 616, nil, "VOR / ILS", "I - VOR/ILS Frequency Change Whole")
 defineToggleSwitch("VORILS_PWR_DIAL", 24, 3617, 617, "VOR / ILS", "I - VOR/ILS Power Dial")
 defineBcdWheel("VORILS_FREQ_DECIMAL", 24, 618, nil, "VOR / ILS", "I - VOR/ILS Frequency Change Decimal")
 defineToggleSwitch("VORILS_TEST_DIAL", 24, 3619, 619, "VOR / ILS", "I - VOR/ILS Test Dial")
+
+-- VTB
 defineToggleSwitch("VTB_PWR_SW", 5, 3221, 221, "VTB", "I - VTB - Power Switch")
 defineToggleSwitch("VTB_DEC", 5, 3222, 222, "VTB", "I - VTB - Declutter (ALLEG)")
 defineToggleSwitch("VTB_OR_SEL", 5, 3223, 223, "VTB", "I - VTB - Orientation Selector (Inop) (CADR)")
@@ -804,6 +937,8 @@ defineTumb("TGT_HD", 5, 3217, 217, 1, {-1, 1}, nil, false, "VTB", "I - VTB - Tar
 defineTumb("TGT_ALT", 5, 3218, 218, 1, {-1, 1}, nil, false, "VTB", "I - VTB - Target Altitude (Z)")
 defineTumb("TGT_MACH_NUM", 5, 3219, 219, 1, {-1, 1}, nil, false, "VTB", "I - VTB - Target Mach Number (M)")
 defineTumb("TGT_AGE", 5, 3220, 220, 1, {-1, 1}, nil, false, "VTB", "I - VTB - Target Age (T)")
+
+-- HUD / VTH
 defineRotary("MIN_ALT_SEL", 5, 3192, 192, "VTH", "I - HUD - Minimum Altitude Selector")
 defineToggleSwitch("HUD_DEC_SW", 5, 3203, 203, "VTH", "I - HUD - Declutter Switch")
 defineToggleSwitch("AUX_GUNSIGHT", 5, 3206, 206, "VTH", "I - HUD - Auxiliary Gunsight")
@@ -815,24 +950,9 @@ defineTumb("HUD_PWR_SW", 5, 3201, 201, 0.5, {0, 1}, nil, false, "VTH", "I - HUD 
 defineTumb("HUD_RALT_SEL_SW", 5, 3204, 204, 0.5, {0, 1}, nil, false, "VTH", "I - HUD - Altimeter Selector Switch")
 defineTumb("RAD_RALT_PWR_SW", 5, 3205, 205, 0.5, {0, 1}, nil, false, "VTH", "I - HUD - Radar Altimeter Power Switch")
 defineIndicatorLight("HUD_REC", 212, "VTH", "O - HUD - Recording Indicator Light")
+
+-- VVI
 defineFloat("VARIO_NEEDLE", 324, {0, 1}, "VVI", "O - VVI - Needle")
-defineString("ECM_FLR_DISP", getIRDisp, 2, "ECM BOX", "O - ECM Box FLR Display")
-defineString("ECM_EM_DISP", getEMDisp, 3, "ECM BOX", "O - ECM Box EM Display")
-defineString("PPA_QTY_DISP", getPPAQtyDisp, 2, "PPA", "O - PPA Quantity Display")
-defineString("PPA_QTY_DISP", getPPAIntDisp, 2, "PPA", "O - PPA Interval Display")
-defineString("PCA_UR1_DISP", getPCAUR1Disp, 3, "PCA", "O - PCA Upper #1 Display")
-defineString("PCA_UR2_DISP", getPCAUR2Disp, 3, "PCA", "O - PCA Upper #2 Display")
-defineString("PCA_UR3_DISP", getPCAUR3Disp, 3, "PCA", "O - PCA Upper #3 Display")
-defineString("PCA_UR4_DISP", getPCAUR4Disp, 3, "PCA", "O - PCA Upper #4 Display")
-defineString("PCA_UR5_DISP", getPCAUR5Disp, 3, "PCA", "O - PCA Upper #5 Display")
-defineString("PCA_BR1_DISP", getPCABR1Disp, 3, "PCA", "O - PCA Bottom #1 Display")
-defineString("PCA_BR2_DISP", getPCABR2Disp, 3, "PCA", "O - PCA Bottom #2 Display")
-defineString("PCA_BR3_DISP", getPCABR3Disp, 3, "PCA", "O - PCA Bottom #3 Display")
-defineString("PCA_BR4_DISP", getPCABR4Disp, 3, "PCA", "O - PCA Bottom #4 Display")
-defineString("PCA_BR5_DISP", getPCABR5Disp, 3, "PCA", "O - PCA Bottom #5 Display")
-
-
-
 
 
 
