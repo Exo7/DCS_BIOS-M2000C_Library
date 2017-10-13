@@ -34,10 +34,14 @@
 -- v1.15 by Exo7
 --		Adding PCA displays
 --
+-- v1.16 by Exo7
+--		Adding "FEU PC", "LIM" & "IFF" Indicator Light
+--		Adding Oxy Flow Indicator
+--	
 -----------------------------------------------------------
 
 
-BIOS.protocol.beginModule("M-2000C", 0x3000)
+BIOS.protocol.beginModule("M-2000C", 0x3600)
 BIOS.protocol.setExportModuleAircrafts({"M-2000C"})
 
 local parse_indication = BIOS.util.parse_indication
@@ -387,6 +391,7 @@ defineFloat("ADI_FLAG", 319, {0, 1}, "ADI", "O - ADI - Flag")
 defineFloat("ADI_LIGHT", 321, {0, 1}, "ADI", "O - ADI - Voyant Ambre sous")
 defineFloat("ADI_ILS_V", 322, {0, 1}, "ADI", "O - ADI - Vertical ILS Needle")
 defineFloat("ADI_ILS_H", 323, {0, 1}, "ADI", "O - ADI - Horizontal ILS Needle")
+defineFloat("ADI_BILLE", 320, {0, 1}, "ADI", "O - ADI - Bille")
 
 -- AIR FLOW PANEL (BECS, PELLES, SOURIS)
 defineToggleSwitch("INTAKE_SLATS_OP_SW", 3, 3460, 460, "AIR FLOW PANEL", "I - Intake Slats Operation Switch (PELLES)")
@@ -679,11 +684,14 @@ defineFloat("PSV_EL_D_EXT", 427, {0, 1}, "LEFT PANEL", "O - PSV - Right Ext Elev
 defineFloat("PSV_EL_D_INT", 428, {0, 1}, "LEFT PANEL", "O - PSV - Right Int Elevon Position display")
 
 -- MAIN PANEL
+defineIndicatorLight("LIM_IND", 185, "MAIN PANEL", "O - LIM Indicator Light")
+defineIndicatorLight("IFF_IND", 186, "MAIN PANEL", "O - IFF Indicator Light")
 defineiCommand("AUDIO_WARN_RESET", 144, 191, "MAIN PANEL", "I - AL - Audio Warning Reset Button (PANNE)")
 defineIndicatorLight("MC_AMBRE", 199, "MAIN PANEL", "O - AL - Amber PANNE Button Light")
 defineIndicatorLight("MC_ROUGE", 200, "MAIN PANEL", "O - AL - Red PANNE Button Light")
 defineIndicatorLight("PC", 373, "MAIN PANEL", "O - AL - PC Light")
 defineIndicatorLight("FEU_SEC", 374, "MAIN PANEL", "O - AL - FEU SEC Light")
+defineIndicatorLight("FEU_PC", 375, "MAIN PANEL", "O - AL - FEU PC Light")
 defineIndicatorLight("DEM", 376, "MAIN PANEL", "O - AL - DEMARRAGE Light")
 
 -- MISCELANEOUS
@@ -854,6 +862,7 @@ defineToggleSwitch("QRA_SW", 8, 3654, 654, "RIGHT PANEL", "I - Alert Network (QR
 defineToggleSwitch("LOX_DIL_LEV", 25, 3910, 910, "RIGHT PANEL", "I - LOX Dilution Lever")
 defineToggleSwitch("LOX_EMER_SUP", 25, 3912, 912, "RIGHT PANEL", "I - LOX Emergency Supply")
 defineFloat("OXY_NEEDLE", 518, {0, 1}, "RIGHT PANEL", "O - LOX - Needle")
+defineFloat("OXY_FLOW_IND", 519, {0, 1}, "RIGHT PANEL", "O - LOX - Oxygen Flow Indicator")
 
 -- RWR
 definePotentiometer("RWR_LGT_BRIGHT_CTRL", 16, 3228, 228, {0, 1}, "RWR", "I - RWR Light Brightnes Control")
