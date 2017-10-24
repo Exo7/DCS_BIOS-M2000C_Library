@@ -8,7 +8,7 @@
 --     LIBRARY     	:    Mirage 2000C RAZBAM
 --     CONTIBUTORS 	:    Exo7, Ergo 
 --     LINK        	:    https://github.com/Exo7/DCS_BIOS-M2000C_Library/releases/latest
---     VERSION     	:    v1.16
+--     VERSION     	:    v1.17
 --
 -----------------------------------------------------------
 -- Release log : 
@@ -35,10 +35,12 @@
 --		Adding PCA displays
 --
 -- v1.16 by Exo7
---		Modifying Memory Allocation Address to match with existants modules
 --		Adding "FEU PC", "LIM" & "IFF" Indicator Light
 --		Adding Oxy Flow Indicator
 --		Adding ADI "Bille"
+--
+-- v1.17 by Exo7
+--		Modifying Memory Allocation Address to match with existants modules
 --
 -----------------------------------------------------------
 
