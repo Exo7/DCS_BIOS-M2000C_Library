@@ -8,7 +8,7 @@
 --     LIBRARY     	:    Mirage 2000C RAZBAM
 --     CONTIBUTORS 	:    Exo7, Ergo 
 --     LINK        	:    https://github.com/Exo7/DCS_BIOS-M2000C_Library/releases/latest
---     VERSION     	:    v1.15
+--     VERSION     	:    v1.16
 --
 -----------------------------------------------------------
 -- Release log : 
@@ -29,19 +29,21 @@
 -- v1.14 by Exo7
 --		Adding ECM BOX displays
 --		Adding PPA displays
---		Optimising "getDisplay" functions
+--		Optimising "getDisplay" functions.
 --
 -- v1.15 by Exo7
 --		Adding PCA displays
 --
 -- v1.16 by Exo7
+--		Modifying Memory Allocation Address to match with existants modules
 --		Adding "FEU PC", "LIM" & "IFF" Indicator Light
 --		Adding Oxy Flow Indicator
---	
+--		Adding ADI "Bille"
+--
 -----------------------------------------------------------
 
 
-BIOS.protocol.beginModule("M-2000C", 0x3600)
+BIOS.protocol.beginModule("M-2000C", 0x6000)
 BIOS.protocol.setExportModuleAircrafts({"M-2000C"})
 
 local parse_indication = BIOS.util.parse_indication
@@ -384,14 +386,14 @@ end
 -- ADI
 defineToggleSwitch("ADI_CAGE_LEV", 0, 3314, 314, "ADI", "I - ADI - Cage Lever")
 defineToggleSwitch("ADI_BKL_SW", 0, 3315, 315, "ADI", "I - ADI - Backlight Switch")
-defineFloat("ADI_PITCH", 316, {0, 1}, "ADI", "O - ADI - Pitch Position")
-defineFloat("ADI_ROLL", 317, {0, 1}, "ADI", "O - ADI - Roll Position")
-defineFloat("ADI_COMPAS", 318, {0, 1}, "ADI", "O - ADI - Compass Position")
+defineFloat("ADI_PITCH", 316, {-1, 1}, "ADI", "O - ADI - Pitch Position")
+defineFloat("ADI_ROLL", 317, {-1, 1}, "ADI", "O - ADI - Roll Position")
+defineFloat("ADI_COMPAS", 318, {-1, 1}, "ADI", "O - ADI - Compass Position")
 defineFloat("ADI_FLAG", 319, {0, 1}, "ADI", "O - ADI - Flag")
 defineFloat("ADI_LIGHT", 321, {0, 1}, "ADI", "O - ADI - Voyant Ambre sous")
-defineFloat("ADI_ILS_V", 322, {0, 1}, "ADI", "O - ADI - Vertical ILS Needle")
-defineFloat("ADI_ILS_H", 323, {0, 1}, "ADI", "O - ADI - Horizontal ILS Needle")
-defineFloat("ADI_BILLE", 320, {0, 1}, "ADI", "O - ADI - Bille")
+defineFloat("ADI_ILS_V", 322, {-1, 1}, "ADI", "O - ADI - Vertical ILS Needle")
+defineFloat("ADI_ILS_H", 323, {-1, 1}, "ADI", "O - ADI - Horizontal ILS Needle")
+defineFloat("ADI_BILLE", 320, {-1, 1}, "ADI", "O - ADI - Bille")
 
 -- AIR FLOW PANEL (BECS, PELLES, SOURIS)
 defineToggleSwitch("INTAKE_SLATS_OP_SW", 3, 3460, 460, "AIR FLOW PANEL", "I - Intake Slats Operation Switch (PELLES)")
@@ -448,8 +450,8 @@ defineIndicatorLight("AP_G_AMBRE", 298, "AUTOPILOT", "O - AP - G Amber Light")
 -- BACKUP ADI
 defineToggleSwitch("SB_ADI_CAGE_SW", 0, 3325, 325, "BACKUP ADI", "I - BKADI - UNCAGE")
 defineRotary("SB_ADI_ROT", 0, 3328, 328, "BACKUP ADI", "I - BKADI - Set")
-defineFloat("SB_ADI_ROLL", 326, {0, 1}, "BACKUP ADI", "O - BKADI - Roll Position")
-defineFloat("SB_ADI_PITCH", 327, {0, 1}, "BACKUP ADI", "O - BKADI - Pitch Position")
+defineFloat("SB_ADI_ROLL", 326, {-1, 1}, "BACKUP ADI", "O - BKADI - Roll Position")
+defineFloat("SB_ADI_PITCH", 327, {-1, 1}, "BACKUP ADI", "O - BKADI - Pitch Position")
 defineFloat("SB_ADI_FLAG", 329, {0, 1}, "BACKUP ADI", "O - BKADI - Flag")
 
 -- CAUTION LIGHT PANEL
@@ -597,7 +599,7 @@ defineIndicatorLight("FUEL_V_D", 368, "FUEL SYSTEM", "O - FUEL - Right V Light")
 defineString("FUEL_FLOW", getFuelFlow, 3, "FUEL SYSTEM", "O - FUEL - Fuel Flow Display")
 
 -- ACCELEROMETER
-defineFloat("GMETER_NEEDLE", 347, {0, 1}, "G-METER", "O - ACC - G Needle")
+defineFloat("GMETER_NEEDLE", 347, {-1, 1}, "G-METER", "O - ACC - G Needle")
 
 -- HSI
 defineRotary("HSI_VAD_SEL", 0, 3340, 340, "HSI", "I - HSI - VAD Selector")
@@ -961,7 +963,7 @@ defineTumb("RAD_RALT_PWR_SW", 5, 3205, 205, 0.5, {0, 1}, nil, false, "VTH", "I -
 defineIndicatorLight("HUD_REC", 212, "VTH", "O - HUD - Recording Indicator Light")
 
 -- VVI
-defineFloat("VARIO_NEEDLE", 324, {0, 1}, "VVI", "O - VVI - Needle")
+defineFloat("VARIO_NEEDLE", 324, {-1, 1}, "VVI", "O - VVI - Needle")
 
 
 
