@@ -42,13 +42,16 @@
 -- v1.17 by Exo7
 --		Modifying Memory Allocation Address to match with existants modules
 --
+-- v1.18 by Exo7
+--		Bug Fixes
+--
 -----------------------------------------------------------
 
 
 BIOS.protocol.beginModule("M-2000C", 0x6000)
 BIOS.protocol.setExportModuleAircrafts({"M-2000C"})
 
-local parse_indication = BIOS.util.parse_indication
+
 local document = BIOS.util.document
 local defineIndicatorLight = BIOS.util.defineIndicatorLight
 local definePushButton = BIOS.util.definePushButton
@@ -62,30 +65,254 @@ local defineString = BIOS.util.defineString
 local defineSetCommandTumb = BIOS.util.defineSetCommandTumb
 
 
+
+
+
+-- Custom Functions
+
+-- Get Displays Functions
+
 local function getUHFFrequency()
-	local ind = parse_indication(9)
-	if ind == nil then return "       " end	
-	local freqStatus = ind["text_COM_UHF2"]
-	return freqStatus:sub(0,3) .. "." .. freqStatus:sub(5,6)
+	local ret = {}
+	local li = list_indication(9)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local freqStatus = ret["text_COM_UHF2"]
+	return freqStatus:sub(0,3) .. freqStatus:sub(5,6)
+ end
+
+ local function getVHFFrequency()
+	local ret = {}
+	local li = list_indication(9)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local freqStatus = ret["text_COM_UHF1"]
+	return freqStatus:sub(0,3) .. freqStatus:sub(5,6)
+ end
+
+ local function getFuelFlow()
+	local ret = {}
+	local li = list_indication(5)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+local fuelFlow = ret["txt_fuel_g"]
+return fuelFlow
 end
 
-local function getVHFFrequency()
-	local ind = parse_indication(9)
-	if ind == nil then return "       " end	
-	local freqStatus = ind["text_COM_UHF1"]
-	return freqStatus:sub(0,3) .. "." .. freqStatus:sub(5,6)
+local function getEMDisp()
+	local ret = {}
+	local li = list_indication(3)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+local ecmChf = ret["text_ECM_CHF"]
+return ecmChf
 end
 
-local function getFuelFlow()
-	local ind = parse_indication(5)
-	if ind == nil then return "   " end
-	local fuelFlow = ind["text_fuel_g"]
-	return fuelFlow
+
+local function getIRDisp()
+	local ret = {}
+	local li = list_indication(4)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+local ecmFlr = ret["text_ECM_FLR"]
+return ecmFlr
+end
+
+local function getPCAUR1Disp()
+	local ret = {}
+	local li = list_indication(6)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+local PcaUr1 = ret["text_PCA_UR1"]
+return PcaUr1
+end
+
+local function getPCAUR2Disp()
+	local ret = {}
+	local li = list_indication(6)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaUr2 = ret["text_PCA_UR2"]
+	return PcaUr2
+end
+
+local function getPCAUR3Disp()
+	local ret = {}
+	local li = list_indication(6)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end	
+	local PcaUr3 = ret["text_PCA_UR3"]
+	return PcaUr3
+end
+
+local function getPCAUR4Disp()
+	local ret = {}
+	local li = list_indication(6)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaUr4 = ret["text_PCA_UR4"]
+	return PcaUr4
+end
+
+local function getPCAUR5Disp()
+	local ret = {}
+	local li = list_indication(6)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaUr5 = ret["text_PCA_UR5"]
+	return PcaUr5
+end
+
+local function getPCABR1Disp()
+	local ret = {}
+	local li = list_indication(7)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaBR1 = ret["text_PCA_BR1"]
+	return PcaBR1
+end
+
+local function getPCABR2Disp()
+	local ret = {}
+	local li = list_indication(7)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaBR2 = ret["text_PCA_BR2"]
+	return PcaBR2
+end
+
+local function getPCABR3Disp()
+	local ret = {}
+	local li = list_indication(7)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaBR3 = ret["text_PCA_BR3"]
+	return PcaBR3
+end
+
+local function getPCABR4Disp()
+	local ret = {}
+	local li = list_indication(7)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaBR4 = ret["text_PCA_BR4"]
+	return PcaBR4
+end
+
+local function getPCABR5Disp()
+	local ret = {}
+	local li = list_indication(7)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local PcaBR5 = ret["text_PCA_BR5"]
+	return PcaBR5
+end
+
+local function getPPAQtyDisp()
+	local ret = {}
+	local li = list_indication(8)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local ppaQty = ret["text_PPA_QTY"]
+	return ppaQty
+end
+
+local function getPPAIntDisp()
+	local ret = {}
+	local li = list_indication(8)
+	if li == "" then return nil end
+	local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
+	while true do
+        local name, value = m()
+        if not name then break end
+		ret[name] = value
+	end
+	local ppaInt = ret["text_PPA_INT"]
+	return ppaInt
 end
 
 local function getPCNDispL() -- by Ergo
    local li = list_indication(10)
-   --if li == "" then return nil end
    local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
    while true do
         local name, value = m()
@@ -101,7 +328,6 @@ end
 
 local function getPCNDispR() -- by Ergo
    local li = list_indication(10)
-   --if li == "" then return nil end
    local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
    while true do
         local name, value = m()
@@ -117,7 +343,6 @@ end
 
 local function getPCNDigitR()  -- by Ergo
    local li = list_indication(10)
-   --if li == "" then return nil end
    local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
    local count = 0
    local ret = " "
@@ -151,7 +376,6 @@ end
 
 local function getPCNDigitL()  -- by Ergo
    local li = list_indication(10)
-   --if li == "" then return nil end
    local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
    local count = 0
    local ret = " "
@@ -206,7 +430,6 @@ end
 
 local function getPCNDispPrep() -- by Ergo
    local li = list_indication(11)
-   --if li == "" then return nil end
    local m = li:gmatch("-----------------------------------------\n([^\n]+)\n([^\n]*)\n")
    while true do
         local name, value = m()
@@ -226,103 +449,8 @@ local function getPCNDispPrep() -- by Ergo
 return "         "
 end
 
-local function getEMDisp()
-	local ind = parse_indication(3)
-	if ind == nil then return "   " end	
-	local ecmChf = ind["text_ECM_CHF"]
-	return ecmChf
-end
 
-local function getPCAUR1Disp()
-	local ind = parse_indication(6)
-	if ind == nil then return "   " end	
-	local PcaUr1 = ind["text_PCA_UR1"]
-	return PcaUr1
-end
-
-local function getPCAUR2Disp()
-	local ind = parse_indication(6)
-	if ind == nil then return "   " end	
-	local PcaUr2 = ind["text_PCA_UR2"]
-	return PcaUr2
-end
-
-local function getPCAUR3Disp()
-	local ind = parse_indication(6)
-	if ind == nil then return "   " end	
-	local PcaUr3 = ind["text_PCA_UR3"]
-	return PcaUr3
-end
-
-local function getPCAUR4Disp()
-	local ind = parse_indication(6)
-	if ind == nil then return "   " end	
-	local PcaUr4 = ind["text_PCA_UR4"]
-	return PcaUr4
-end
-
-local function getPCAUR5Disp()
-	local ind = parse_indication(6)
-	if ind == nil then return "   " end	
-	local PcaUr5 = ind["text_PCA_UR5"]
-	return PcaUr5
-end
-
-local function getPCABR1Disp()
-	local ind = parse_indication(7)
-	if ind == nil then return "   " end	
-	local PcaBR1 = ind["text_PCA_BR1"]
-	return PcaBR1
-end
-
-local function getPCABR2Disp()
-	local ind = parse_indication(7)
-	if ind == nil then return "   " end	
-	local PcaBR2 = ind["text_PCA_BR2"]
-	return PcaBR2
-end
-
-local function getPCABR3Disp()
-	local ind = parse_indication(7)
-	if ind == nil then return "   " end	
-	local PcaBR3 = ind["text_PCA_BR3"]
-	return PcaBR3
-end
-
-local function getPCABR4Disp()
-	local ind = parse_indication(7)
-	if ind == nil then return "   " end	
-	local PcaBR4 = ind["text_PCA_BR4"]
-	return PcaBR4
-end
-
-local function getPCABR5Disp()
-	local ind = parse_indication(7)
-	if ind == nil then return "   " end	
-	local PcaBR5 = ind["text_PCA_BR5"]
-	return PcaBR5
-end
-
-local function getIRDisp()
-	local ind = parse_indication(3)
-	if ind == nil then return "   " end	
-	local ecmFlr = ind["text_ECM_FLR"]
-	return ecmFlr
-end
-
-local function getPPAQtyDisp()
-	local ind = parse_indication(8)
-	if ind == nil then return "  " end
-	local ppaQty = ind["text_PPA_QTY"]
-	return ppaQty
-end
-
-local function getPPAIntDisp()
-	local ind = parse_indication(8)
-	if ind == nil then return "  " end
-	local ppaInt = ind["text_PPA_INT"]
-	return ppaInt
-end
+-- Inputs Functions
 
 function defineBcdWheel(msg, device_id, arg_number, output_map, category, description)
 	local alloc = moduleBeingDefined.memoryMap:allocateInt{ maxValue = 1 }
@@ -383,7 +511,6 @@ function defineiCommand(msg, iCommand_id, arg_number, category, description)
 	end
 	
 end
-
 
 -- ADI
 defineToggleSwitch("ADI_CAGE_LEV", 0, 3314, 314, "ADI", "I - ADI - Cage Lever")
@@ -819,7 +946,7 @@ defineIndicatorLight("PPA_MAGIC_MIS", 275, "PPA", "O - PPA - MAGIC MAG Light")
 defineIndicatorLight("PPA_GUN_ROCKET_PAP", 280, "PPA", "O - PPA - Gun/Rockets Mode PAR Indicator Light")
 defineIndicatorLight("PPA_GUN_ROCKET_TOT", 281, "PPA", "O - PPA - Gun/Rockets Mode TOT Indicator Light")
 defineString("PPA_QTY_DISP", getPPAQtyDisp, 2, "PPA", "O - PPA Quantity Display")
-defineString("PPA_QTY_DISP", getPPAIntDisp, 2, "PPA", "O - PPA Interval Display")
+defineString("PPA_INT_DISP", getPPAIntDisp, 2, "PPA", "O - PPA Interval Display")
 
 -- PSM
 defineTumb("INS_OPAL_MODE", 9, 3629, 629, 0.1, {0, 0.4}, nil, false, "PSM", "I - PSM - INS Operational Mode")
@@ -911,10 +1038,10 @@ defineBcdWheel("UVHF_10_M_SEL", 19, 441, nil, "U/VHF RADIO", "I - UVHF - 10 MHz 
 defineBcdWheel("UVHF_1_M_SEL", 19, 442, nil, "U/VHF RADIO", "I - UVHF - 1 MHz Selector")
 defineBcdWheel("UVHF_100_K_SEL", 19, 443, nil, "U/VHF RADIO", "I - UVHF - 100 KHz Selector")
 defineBcdWheel("UVHF_25_K_SEL", 19, 444, nil, "U/VHF RADIO", "I - UVHF - 25 KHz Selector")
-defineRotary("UVHF_PRESET_KNOB", 19, 3445, 445, "U/VHF RADIO", "I - UVHF - Preset Knob")
+defineSetCommandTumb("UVHF_PRESET_KNOB", 19, 3445, 445, 0.05, {0.05, 1}, nil, true, "UVHF RADIO", "Preset Knob UVHF")
 defineToggleSwitch("UVHF_PWR_5W_25W_SW", 19, 3447, 447, "U/VHF RADIO", "I - UVHF - Power 5W/25W Switch")
 defineTumb("UVHF_E+A2_SW", 19, 3438, 438, 1, {-1, 1}, nil, false, "U/VHF RADIO", "I - UVHF - E+A2 Switch")
-defineFloat("UVHF_PRESET", 445, {0, 1}, "U/VHF RADIO", "O - UVHF - PRESET Display")
+defineFloat("UVHF_PRESET", 446, {0, 1}, "U/VHF RADIO", "O - UVHF - PRESET Display")
 defineString("VHF_FREQUENCY", getVHFFrequency, 6, "U/VHF RADIO", "O - UVHF - Frequency Report Display")
 
 -- UHF RADIO
@@ -923,9 +1050,9 @@ defineToggleSwitch("UHF_PWR_5W_25W_SW", 20, 3429, 429, "UHF RADIO", "I - UHF - P
 defineToggleSwitch("UHF_SIL_SW", 20, 3430, 430, "UHF RADIO", "I - UHF - SIL Switch")
 defineToggleSwitch("UHF_CDE_SW", 20, 3432, 432, "UHF RADIO", "I - UHF - CDE Switch")
 defineToggleSwitch("UHF_TEST_SW", 20, 3434, 434, "UHF RADIO", "I - UHF - TEST Switch")
-defineRotary("UHF_PRESET_KNOB", 20, 3435, 435, "UHF RADIO", "I - UHF - Preset Knob")
+defineSetCommandTumb("UHF_PRESET_KNOB", 20, 3435, 435, 0.05, {0.05, 1}, nil, true, "UHF RADIO", "Preset Knob UHF")
 defineTumb("UHF_E+A2_SW", 20, 3431, 431, 1, {-1, 1}, nil, false, "UHF RADIO", "I - UHF - E+A2 Switch")
-defineFloat("UHF_PRESET", 435, {0, 1}, "UHF RADIO", "O - UHF - PRESET Display")
+defineFloat("UHF_PRESET", 436, {0, 1}, "UHF RADIO", "O - UHF - PRESET Display")
 defineString("UHF_FREQUENCY", getUHFFrequency, 6, "UHF RADIO", "O - UHF - Frequency Report Display")
 
 -- VOR / ILS
@@ -966,6 +1093,8 @@ defineIndicatorLight("HUD_REC", 212, "VTH", "O - HUD - Recording Indicator Light
 
 -- VVI
 defineFloat("VARIO_NEEDLE", 324, {-1, 1}, "VVI", "O - VVI - Needle")
+
+
 
 
 
