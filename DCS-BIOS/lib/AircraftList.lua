@@ -10,7 +10,6 @@ local function a(name, hasClickableCockpit)
 	end
 end
 
-a("M-2000C", true)
 a("A-10C", true)
 a("Ka-50", true)
 a("Mi-8MT", true)
@@ -22,3 +21,4 @@ a("MiG-21Bis", true)
 a("F-86F Sabre", true)
 a("FW-190D9", true)
 a("Bf-109K-4", true)
+a("M-2000C", true)
