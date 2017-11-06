@@ -8,7 +8,11 @@
 --     LIBRARY     	:    Mirage 2000C RAZBAM
 --     CONTIBUTORS 	:    Exo7, Ergo 
 --     LINK        	:    https://github.com/Exo7/DCS_BIOS-M2000C_Library/releases/latest
+<<<<<<< HEAD
 --     VERSION     	:    v1.19
+=======
+--     VERSION     	:    v1.18
+>>>>>>> ca96d1d03512578d4b7afe48b800af6207b9ec27
 --
 -----------------------------------------------------------
 -- Release log : 
